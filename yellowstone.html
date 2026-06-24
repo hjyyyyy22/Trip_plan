@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>黄石 + 大提顿 9/5-9/9 行程地图</title>
-<meta name="description" content="Bozeman 往返，9/5 黄石园内，9/6-9/7 西黄石，9/8 Cooke City，覆盖大提顿、Old Faithful、大棱镜、Lamar Valley、黄石大峡谷、Mammoth Hot Springs">
+<meta name="description" content="Bozeman 往返，9/5 Alta，9/6-9/7 西黄石，9/8 Cooke City，覆盖大提顿、Old Faithful、大棱镜、Lamar Valley、黄石大峡谷、Mammoth Hot Springs">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -244,8 +244,8 @@ const DAYS = [
   {
     id: 1,
     label: '9/5 周六',
-    date: '12:23 抵达 Bozeman，经北门进入黄石园内住宿',
-    title: 'Mammoth 温泉与园内入住',
+    date: '12:23 抵达 Bozeman，经 West Yellowstone、Driggs 前往 Alta',
+    title: '落地后转场到大提顿西侧',
     color: '#ff9500',
     locations: [
       {
@@ -254,65 +254,105 @@ const DAYS = [
         lng: -111.15300,
         type: 'transport',
         time: '12:23',
-        desc: '抵达、取车、补给后，经 Livingston、Gardiner 前往黄石北门。',
-        detail: '第一天以顺利进园为主。建议取车后买水、路餐并加满油，不在 Bozeman 安排其他停留。',
+        desc: '抵达、取车、补给后，沿 US-191 南下前往 Alta。',
+        detail: '第一天只做长距离转场。建议取车后买水、路餐并加满油，不在 Bozeman 安排正式景点。',
         gmap: 'Bozeman+Yellowstone+International+Airport'
       },
       {
-        name: 'Roosevelt Arch / 黄石北门',
-        lat: 45.02931,
-        lng: -110.70886,
+        name: 'West Yellowstone 补给点',
+        lat: 44.66215,
+        lng: -111.10411,
         type: 'transport',
-        time: '约 16:00',
-        desc: '经 Gardiner 进入黄石。时间正常可在拱门短暂停留拍照。',
-        detail: '航班或取车延误时，不为拍照耽误进园。',
-        gmap: 'Roosevelt+Arch+Gardiner'
+        time: '约 15:30–16:00',
+        desc: '途中休息、加油或简单吃东西，之后继续前往 Driggs、Alta。',
+        detail: '这里仅作弹性休息点。航班或取车延误时可不停，直接赶往住宿。',
+        gmap: 'West+Yellowstone+Montana'
       },
       {
-        name: 'Mammoth Hot Springs Terraces',
-        lat: 44.96715,
-        lng: -110.70481,
-        type: 'spot',
-        time: '16:15–17:45',
-        desc: '游览 Upper / Lower Terraces 精华段，作为第一天唯一正式景点。',
-        detail: '如果落地或取车明显延误，就压缩游览或直接前往住宿。园内道路可能因施工和动物临时拥堵。',
-        gmap: 'Mammoth+Hot+Springs+Terraces'
+        name: 'Driggs',
+        lat: 43.72325,
+        lng: -111.11133,
+        type: 'transport',
+        time: '约 17:30',
+        desc: '到达 Alta 前最后一个适合采购晚餐、早餐和补给的小镇。',
+        detail: '如果住宿附近餐饮选择有限，建议在 Driggs 解决晚餐或打包。',
+        gmap: 'Driggs+Idaho'
       },
       {
-        name: '24 Rainbow Loop',
-        lat: 44.73320,
-        lng: -110.48620,
+        name: '440 W Alta Ski Hill Road',
+        lat: 43.75480,
+        lng: -111.03360,
         type: 'hotel',
-        time: '约 19:00',
-        desc: '第一晚住黄石园内：24 Rainbow Loop, Yellowstone National Park, WY 82190。',
-        detail: '地图点位按园内地址区域显示；实际入口和停车位置以住宿确认信息为准。',
-        gmap: '24+Rainbow+Loop+Yellowstone+National+Park+WY+82190'
+        time: '约 18:00–19:00',
+        desc: '第一晚住 Alta：440 W Alta Ski Hill Road, Alta, WY 83414。',
+        detail: '这里位于大提顿山脉西侧，第二天需经 Teton Pass、Jackson 进入公园。地图点位按地址区域显示，以住宿确认页为准。',
+        gmap: '440+W+Alta+Ski+Hill+Road+Alta+WY+83414'
       }
     ]
   },
   {
     id: 2,
     label: '9/6 周日',
-    date: '从黄石园内南下大提顿，傍晚返回 West Yellowstone',
+    date: '从 Alta 经 Teton Pass 进入大提顿，傍晚北上 West Yellowstone',
     title: '大提顿精华长线日',
     color: '#34c759',
     locations: [
       {
-        name: 'West Thumb Geyser Basin',
-        lat: 44.41551,
-        lng: -110.57291,
+        name: '440 W Alta Ski Hill Road',
+        lat: 43.75480,
+        lng: -111.03360,
+        type: 'hotel',
+        time: '05:30–06:00',
+        desc: '带齐行李退房，经 Teton Pass、Jackson 前往大提顿。',
+        detail: 'Teton Pass 山路天气变化快，出发前查看路况。若遇关闭，需要绕行，后续景点必须大幅删减。',
+        gmap: '440+W+Alta+Ski+Hill+Road+Alta+WY+83414'
+      },
+      {
+        name: 'Mormon Row Historic District',
+        lat: 43.66261,
+        lng: -110.66416,
         type: 'spot',
-        time: '07:15',
-        desc: '清晨先看黄石湖边热泉盆地，再从南门进入大提顿。',
-        detail: '这一天车程很长，建议 06:30 左右离开住宿；若出发较晚，这站控制在 30 分钟。',
-        gmap: 'West+Thumb+Geyser+Basin'
+        time: '约 07:30',
+        desc: '经典谷仓与大提顿山脉同框，早晨光线更适合拍摄。',
+        detail: '如果经 Teton Pass 抵达较晚，这站和 Schwabacher Landing 二选一。',
+        gmap: 'Mormon+Row+Historic+District'
+      },
+      {
+        name: 'Schwabacher Landing',
+        lat: 43.70539,
+        lng: -110.67136,
+        type: 'spot',
+        time: '08:30',
+        desc: '大提顿倒影经典机位，清晨水面通常更平静。',
+        detail: '碎石支路和停车状态以当天开放情况为准。',
+        gmap: 'Schwabacher+Landing'
+      },
+      {
+        name: 'Jenny Lake',
+        lat: 43.75112,
+        lng: -110.72145,
+        type: 'spot',
+        time: '10:00',
+        desc: '大提顿最著名湖区。以湖边短步道为主，不安排长距离徒步。',
+        detail: '若坐船前往 Hidden Falls，需要重新评估下午时间；这版默认不坐船。',
+        gmap: 'Jenny+Lake+Grand+Teton'
+      },
+      {
+        name: 'Signal Mountain Summit Road',
+        lat: 43.84819,
+        lng: -110.61272,
+        type: 'spot',
+        time: '12:00',
+        desc: '天气晴朗时上山看 Jackson Lake 和山谷全景。',
+        detail: '烟霾、低云或时间不足时直接跳过。',
+        gmap: 'Signal+Mountain+Summit+Road'
       },
       {
         name: 'Oxbow Bend',
         lat: 43.86656,
         lng: -110.54619,
         type: 'spot',
-        time: '09:30',
+        time: '13:15',
         desc: '蛇河河湾和 Mount Moran 经典视角，也常有野生动物活动。',
         gmap: 'Oxbow+Bend+Grand+Teton'
       },
@@ -321,56 +361,27 @@ const DAYS = [
         lat: 43.90410,
         lng: -110.64154,
         type: 'spot',
-        time: '10:15',
-        desc: 'Jackson Lake 湖景、休息和补给点。',
+        time: '14:00',
+        desc: '湖景、休息和补给点，也是北上黄石前的收尾。',
+        detail: '下午需要继续穿过黄石前往西黄石，避免在此安排长步道。',
         gmap: 'Colter+Bay+Village+Grand+Teton'
       },
       {
-        name: 'Signal Mountain Summit Road',
-        lat: 43.84819,
-        lng: -110.61272,
+        name: 'West Thumb Geyser Basin',
+        lat: 44.41551,
+        lng: -110.57291,
         type: 'spot',
-        time: '11:15',
-        desc: '天气好时上山看 Jackson Lake 和山谷全景。',
-        detail: '如果有烟霾或天气差，可以跳过，把时间留给 Jenny Lake。',
-        gmap: 'Signal+Mountain+Summit+Road'
-      },
-      {
-        name: 'Jenny Lake',
-        lat: 43.75112,
-        lng: -110.72145,
-        type: 'spot',
-        time: '13:00',
-        desc: '大提顿最著名湖区。轻松版走湖边；体力好可坐船去 Hidden Falls 方向。',
-        detail: '不建议安排 Cascade Canyon 长徒步，这趟时间更适合景点精华线。',
-        gmap: 'Jenny+Lake+Grand+Teton'
-      },
-      {
-        name: 'Schwabacher Landing',
-        lat: 43.70539,
-        lng: -110.67136,
-        type: 'spot',
-        time: '15:00',
-        desc: '大提顿倒影经典机位，按停车和体力情况停留。',
-        detail: '如果当天节奏落后，这里和 Mormon Row 二选一即可。',
-        gmap: 'Schwabacher+Landing'
-      },
-      {
-        name: 'Mormon Row Historic District',
-        lat: 43.66261,
-        lng: -110.66416,
-        type: 'spot',
-        time: '15:45',
-        desc: '经典谷仓与大提顿山脉同框，作为南端收尾。',
-        detail: '这站是弹性点。必须给返回西黄石预留充足时间，不建议摸黑赶园内山路。',
-        gmap: 'Mormon+Row+Historic+District'
+        time: '约 16:15',
+        desc: '黄石湖边热泉盆地，从大提顿北上西黄石顺路。',
+        detail: '若前面景点超时，这站控制在 30 分钟或直接跳过，避免夜间长时间驾驶。',
+        gmap: 'West+Thumb+Geyser+Basin'
       },
       {
         name: 'Pioneer Motel',
         lat: 44.66163,
         lng: -111.10594,
         type: 'hotel',
-        time: '约 20:00–21:00',
+        time: '约 19:30–20:30',
         desc: '入住 515 Madison Ave, West Yellowstone, MT 59758；9/6、9/7 连住两晚。',
         gmap: 'Pioneer+Motel+515+Madison+Ave+West+Yellowstone+MT+59758'
       }
@@ -577,14 +588,24 @@ const DAYS = [
         gmap: 'Lamar+Valley+Yellowstone'
       },
       {
-        name: 'Tower Junction / Mammoth 通行',
+        name: 'Tower Junction',
         lat: 44.91663,
         lng: -110.41692,
         type: 'transport',
         time: '约 09:00',
-        desc: '从 Lamar Valley 向西，经 Tower Junction、Mammoth、Gardiner 离园。',
-        detail: 'Mammoth 已在 9/5 游览，今天不再安排景点停留。动物堵车或施工时直接压缩沿途停靠。',
+        desc: '从 Lamar Valley 向西，继续前往 Mammoth 和 Gardiner。',
+        detail: '若动物堵车已经耗费较多时间，到这里就应决定跳过 Mammoth，直接离园去机场。',
         gmap: 'Tower-Roosevelt+Junction'
+      },
+      {
+        name: 'Mammoth Hot Springs Terraces',
+        lat: 44.96715,
+        lng: -110.70481,
+        type: 'spot',
+        time: '目标 09:45–10:30',
+        desc: '快速游览 Upper / Lower Terraces 精华段；这是返程日的可压缩项。',
+        detail: '只在 09:45 左右顺利抵达时停留约 45 分钟。若晚于 10:15、遇施工或动物堵车，直接跳过并驶向 BZN。',
+        gmap: 'Mammoth+Hot+Springs+Terraces'
       },
       {
         name: 'Bozeman Yellowstone International Airport',
@@ -593,7 +614,7 @@ const DAYS = [
         type: 'transport',
         time: '目标 12:30–13:00',
         desc: '加油、还车和值机；航班 16:23 出发。',
-        detail: '最后一天把 13:00 视为机场目标到达时间。若 Lamar 出现长时间动物堵车，应立即离开，不继续等待观兽。',
+        detail: '最后一天把 13:00 视为机场目标到达时间。若 Lamar 或 Mammoth 路段出现延误，应立即压缩或跳过 Mammoth。',
         gmap: 'Bozeman+Yellowstone+International+Airport'
       }
     ]
@@ -608,7 +629,7 @@ function overviewContent() {
   return `
 <div class="hero"><h1>黄石 + 大提顿</h1><p class="subtitle">9/5-9/9 · Bozeman 往返 · 经典景点优先</p></div>
 <div class="info-grid">
-  <div class="info-card"><div class="label">住宿</div><div class="value">9/5 黄石园内<br>9/6–7 西黄石<br>9/8 Cooke City</div></div>
+  <div class="info-card"><div class="label">住宿</div><div class="value">9/5 Alta<br>9/6–7 西黄石<br>9/8 Cooke City</div></div>
   <div class="info-card"><div class="label">航班</div><div class="value">9/5 12:23 到 Bozeman<br>9/9 16:23 离开 Bozeman</div></div>
   <div class="info-card"><div class="label">交通</div><div class="value">全程自驾<br>最后一天不回酒店</div></div>
   <div class="info-card"><div class="label">节奏</div><div class="value">著名景点优先<br>9/6 是最长的一天</div></div>
@@ -616,7 +637,7 @@ function overviewContent() {
 <div class="section-head">行程概览</div>
 <div class="day-list">${DAYS.slice(1).map(d=>'<div class="card" onclick="go('+d.id+')"><div class="name"><span class="dot" style="background:'+d.color+'"></span>'+d.label+' · '+d.title+'</div><div class="desc">'+d.date+'</div></div>').join('')}</div>
 <div class="section-head">执行提醒</div>
-<div class="pay-summary"><h4>最后一天原则</h4><div>9/9 从 Cooke City 05:30 出发，清晨看 Lamar Valley，08:00–08:30 开始撤离。Mammoth 已放在 9/5，返程日不重复游览。</div></div>
+<div class="pay-summary"><h4>最后一天原则</h4><div>9/9 从 Cooke City 05:30 出发，清晨看 Lamar Valley，最晚 08:00–08:30 开始撤离。Mammoth 仅在路况顺利时停留约 45 分钟，晚点就直接跳过。</div></div>
 <div class="pay-summary"><h4>天气与路况</h4><div>黄石和大提顿天气变化快，出发前一天查看 NPS 路况。遇到施工或动物堵车，优先保留当天主景点，弹性点直接跳过。</div></div>
 <div class="pay-summary"><h4>野生动物距离</h4><div>熊、狼、美洲狮至少 100 yards；野牛、麋鹿等至少 25 yards。不要靠近、喂食或为拍照堵路。</div></div>
 <div class="section-head">图例</div>
