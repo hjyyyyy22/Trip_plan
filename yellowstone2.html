@@ -1,77 +1,949 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#17382f">
-<meta name="description" content="2026年9月5日至9日黄石国家公园自驾行程：老忠实、大棱镜步道、黄石峡谷、海登谷和拉马尔谷。">
-<title>黄石秋日自驾路书｜9.5–9.9</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>黄石国家公园 9/5–9/9 天气版行程地图</title>
+<meta name="description" content="Bozeman 往返，按天气安排 Old Faithful、大棱镜、黄石大峡谷、Hayden Valley、Mammoth Hot Springs 与 Lamar Valley。">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
-:root{--ink:#19352e;--pine:#17382f;--cream:#f5f0e4;--paper:#fffdf7;--sun:#efa843;--rust:#c95f3f;--sky:#dce9e5;--line:#d8d2c4;--muted:#68736d;--shadow:0 16px 46px #18352d1c}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.65 system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}a{color:inherit}.wrap{width:min(1080px,calc(100% - 28px));margin:auto}.hero{background:linear-gradient(135deg,#102b25,#214b3f);color:#fff;padding:56px 0 42px}.eyebrow{letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:#e7d3a6;font-weight:800}.hero h1,.section h2{font-family:Georgia,"Songti SC",serif}.hero h1{font-size:clamp(38px,7vw,72px);line-height:1.02;margin:12px 0 14px}.hero p{font-size:17px;color:#dae6df;max-width:720px;margin:0}.route{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.route span{padding:7px 12px;border:1px solid #ffffff38;border-radius:999px;background:#ffffff12}.deadline{margin-top:22px;display:inline-flex;gap:10px;padding:12px 15px;border-radius:12px;background:var(--sun);color:#30271b;font-weight:800}.deadline b{font-size:18px}.quick{position:sticky;top:0;z-index:600;background:#f5f0e5ee;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.quick .wrap{display:flex;gap:8px;padding:10px 0;overflow:auto}.quick a{white-space:nowrap;text-decoration:none;padding:7px 12px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-weight:750;font-size:13px}.section{padding:40px 0}.section h2{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0 0 8px}.lead{color:var(--muted);margin:0 0 22px}.grid{display:grid;gap:14px}.prep,.stay-grid{grid-template-columns:repeat(2,1fr)}.card{background:var(--paper);border:1px solid #6a64552b;border-radius:18px;padding:19px;box-shadow:0 5px 20px #2a32290d}.card h3{margin:0 0 7px}.card p{margin:0;color:var(--muted)}.notice{border-left:5px solid var(--sun);background:#fff7df}.weather{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.wx{padding:14px;border-radius:14px;background:var(--paper);border:1px solid var(--line)}.wx b,.wx span{display:block}.wx span{font-size:13px;color:var(--muted)}.wx strong{font-size:20px}.stay .date{font-size:12px;color:var(--rust);font-weight:900;letter-spacing:.07em}.stay address{font-style:normal;color:var(--muted)}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.btn{display:inline-flex;text-decoration:none;padding:7px 11px;border-radius:9px;font-size:13px;font-weight:800;background:var(--pine);color:white}.btn.secondary{background:#e7ece8;color:var(--ink)}#map{height:min(62vh,580px);min-height:420px;border-radius:22px;box-shadow:var(--shadow);border:6px solid var(--paper);z-index:1}.map-note{font-size:13px;color:var(--muted)}.route-pin{background:transparent!important;border:0!important}.route-pin span{width:30px;height:30px;display:grid;place-items:center;border-radius:50% 50% 50% 8px;transform:rotate(-45deg);background:var(--rust);color:white;border:2px solid white;font-weight:900}.route-pin i{transform:rotate(45deg);font-style:normal}.days{display:grid;gap:30px}.day{scroll-margin-top:70px}.day-head{display:flex;align-items:center;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:11px;margin-bottom:16px}.day-no{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--pine);color:white;font:700 20px Georgia}.day-head h3{font:700 25px Georgia,"Songti SC",serif;margin:0}.day-head p{margin:2px 0;color:var(--muted)}.timeline{position:relative;display:grid;gap:12px;padding-left:25px}.timeline:before{content:"";position:absolute;left:8px;top:16px;bottom:16px;border-left:2px dashed #b7b1a3}.stop{position:relative;display:grid;grid-template-columns:120px 1fr;background:var(--paper);border:1px solid #6a64552b;border-radius:16px}.stop:before{content:"";position:absolute;width:11px;height:11px;border:3px solid var(--cream);background:var(--sun);border-radius:50%;left:-24px;top:22px}.time{padding:18px 14px;background:#eee8d9;font-weight:900;border-radius:16px 0 0 16px}.stop-main{padding:16px 18px}.stop-top{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.stop h4{font-size:18px;margin:0}.tag{display:inline-block;font-size:11px;font-weight:900;padding:3px 8px;border-radius:99px;background:#dbe8e4;color:#28544b}.tag.skip{background:#f7dfd5;color:#873a26}.tag.hotel{background:#e7e0ef;color:#55446d}.note{margin:7px 0;color:var(--muted)}.caution{margin:10px 0 0;padding:9px 11px;border-radius:10px;background:#fff2d4;color:#5d461e;font-size:13px}.swap{margin-top:16px;background:#dfece8;border:1px solid #bed2cb;border-radius:16px;padding:16px}.final-alert{background:var(--rust);color:white;border-radius:18px;padding:18px;margin-top:18px}.final-alert strong{display:block;font-size:20px}.tips{grid-template-columns:repeat(3,1fr)}.tip-no{font:700 25px Georgia;color:var(--rust)}.offline{display:none;background:#3e2c1f;color:#fff;text-align:center;padding:8px;font-size:13px}.disclaimer{font-size:12px;color:var(--muted);padding:22px 0 70px;border-top:1px solid var(--line)}@media(max-width:760px){.prep,.stay-grid,.tips,.weather{grid-template-columns:1fr}.section{padding:30px 0}.stop{grid-template-columns:1fr}.time{padding:9px 16px;border-radius:16px 16px 0 0}.timeline{padding-left:19px}.timeline:before{left:4px}.stop:before{left:-20px}#map{height:55vh;min-height:350px}}@media print{.quick{display:none}.section{padding:20px 0}.stop{break-inside:avoid}.actions{display:none}}
+/* ═══════════════════════════════════════════
+   Design System — edit :root to change theme
+   ═══════════════════════════════════════════ */
+:root {
+  --bg-primary:    #ffffff;
+  --bg-secondary:  #f5f5f7;
+  --bg-tertiary:   #fbfbfd;
+  --bg-grouped:    #f2f2f7;
+  --bg-elevated:   #ffffff;
+  --text-primary:   #1d1d1f;
+  --text-secondary: #86868b;
+  --text-tertiary:  #aeaeb2;
+  --accent:        #0071e3;
+  --accent-hover:  #0077ed;
+  --tint-red:    #ff3b30;
+  --tint-orange: #ff9500;
+  --tint-green:  #34c759;
+  --tint-blue:   #007aff;
+  --tint-purple: #af52de;
+  --tint-pink:   #ff2d55;
+  --separator:  rgba(60, 60, 67, .12);
+  --shadow-sm:  0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md:  0 4px 14px rgba(0,0,0,.08);
+  --shadow-lg:  0 8px 30px rgba(0,0,0,.12);
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  20px;
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+               "Helvetica Neue", "Arial", sans-serif;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.47059;
+  letter-spacing: -0.022em;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Map ── */
+#map { width: 100%; height: 40vh; min-height: 280px; position: sticky; top: 0; z-index: 100; }
+.locate-btn {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: rgba(255,255,255,.92); backdrop-filter: blur(8px);
+  border: none; box-shadow: 0 1px 4px rgba(0,0,0,.18);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.locate-btn.active { color: #007aff; }
+@keyframes loc-pulse {
+  0%   { transform: scale(1); opacity: .55; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+.loc-pulse {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: rgba(0,122,255,.25);
+  animation: loc-pulse 1.6s ease-out infinite;
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex; gap: 6px; padding: 12px 16px; overflow-x: auto; -webkit-overflow-scrolling: touch;
+  background: rgba(255,255,255,.85); -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px); position: sticky; top: 40vh; z-index: 99;
+  border-bottom: .5px solid var(--separator); scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  flex-shrink: 0; padding: 7px 16px; border-radius: 980px; border: none;
+  background: var(--bg-grouped); color: var(--text-secondary);
+  font-size: 14px; font-weight: 500; cursor: pointer; transition: all .25s ease;
+  white-space: nowrap; letter-spacing: -0.01em;
+}
+.tab:active { transform: scale(.96); }
+.tab.active { background: var(--accent); color: #fff; }
+
+/* ── Main content ── */
+.content { max-width: 680px; margin: 0 auto; padding: 16px 16px calc(24px + var(--safe-bottom)); }
+
+/* ── Overview ── */
+.hero { text-align: center; padding: 28px 20px 20px; }
+.hero h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; }
+.hero .subtitle { font-size: 17px; color: var(--text-secondary); margin-top: 6px; font-weight: 400; }
+
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.info-card { background: var(--bg-elevated); border-radius: var(--radius-lg); padding: 16px; box-shadow: var(--shadow-sm); }
+.info-card .label { font-size: 12px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: .02em; margin-bottom: 6px; }
+.info-card .value { font-size: 15px; font-weight: 600; line-height: 1.4; }
+
+/* ── Section headers ── */
+.section-head { font-size: 13px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: .03em; padding: 20px 0 8px; }
+
+/* ── Day header ── */
+.day-head { padding: 20px 0 12px; }
+.day-head h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.day-head p { font-size: 15px; color: var(--text-secondary); margin-top: 2px; }
+
+/* ── Route bar ── */
+.route-bar { background: var(--bg-elevated); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 14px; box-shadow: var(--shadow-sm); font-size: 13px; color: var(--text-secondary); line-height: 1.7; white-space: pre-line; }
+.route-bar strong { color: var(--text-primary); }
+
+/* ── Timeline ── */
+.timeline { position: relative; padding-left: 24px; }
+.timeline::before { content: ''; position: absolute; left: 7px; top: 20px; bottom: 20px; width: 1.5px; background: var(--separator); }
+.tl-item { position: relative; margin-bottom: 10px; }
+.tl-dot { position: absolute; left: -20px; top: 18px; width: 10px; height: 10px; border-radius: 50%; z-index: 1; box-shadow: 0 0 0 3px var(--bg-secondary); }
+.tl-dot.food    { background: var(--tint-red); }
+.tl-dot.spot    { background: var(--tint-blue); }
+.tl-dot.hotel   { background: var(--tint-orange); }
+.tl-dot.drink   { background: var(--tint-purple); }
+.tl-dot.transport { background: var(--text-tertiary); }
+
+/* ── Card ── */
+.card { background: var(--bg-elevated); border-radius: var(--radius-md); padding: 14px 16px; box-shadow: var(--shadow-sm); transition: box-shadow .25s ease; cursor: pointer; }
+.card:active { box-shadow: var(--shadow-md); }
+.card .time { font-size: 12px; font-weight: 600; color: var(--text-tertiary); letter-spacing: .01em; }
+.card .name { font-size: 17px; font-weight: 600; margin: 2px 0 4px; letter-spacing: -0.01em; display: flex; align-items: center; gap: 6px; }
+.card .desc { font-size: 14px; color: var(--text-secondary); line-height: 1.45; }
+.spot-photo {
+  position: relative; margin: 10px -16px 11px; aspect-ratio: 16 / 9;
+  overflow: hidden; background: #e8e8ed;
+}
+.spot-photo img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.spot-photo .photo-credit {
+  position: absolute; right: 7px; bottom: 7px; padding: 3px 7px;
+  border-radius: 6px; background: rgba(0,0,0,.58); color: #fff;
+  font-size: 9px; line-height: 1.2; letter-spacing: 0;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+}
+.spot-photo.failed { display: none; }
+
+/* Badge */
+.badge { display: inline-flex; align-items: center; font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 4px; }
+.badge.food   { background: rgba(255,59,48,.1);  color: var(--tint-red); }
+.badge.spot   { background: rgba(0,122,255,.1);  color: var(--tint-blue); }
+.badge.drink  { background: rgba(175,82,222,.1); color: var(--tint-purple); }
+.badge.optional { background: rgba(142,142,147,.12); color: #6e6e73; }
+
+/* Budget */
+.budget { display: inline-block; margin-top: 6px; padding: 3px 10px; background: var(--bg-grouped); border-radius: var(--radius-sm); font-size: 12px; color: var(--text-secondary); font-weight: 500; }
+
+/* Payment */
+.pays { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+.pay { font-size: 11px; padding: 2px 7px; border-radius: 4px; font-weight: 600; }
+.pay.ok  { background: rgba(52,199,89,.1);  color: var(--tint-green); }
+.pay.no  { background: rgba(255,59,48,.08); color: var(--tint-red); }
+.pay.idk { background: rgba(255,149,0,.1);  color: var(--tint-orange); }
+
+/* Links row */
+.links { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 8px 14px; border-radius: var(--radius-sm);
+  font-size: 13px; font-weight: 600; border: none; cursor: pointer;
+  text-decoration: none !important; transition: filter .2s;
+}
+.btn:active { filter: brightness(.9); }
+.btn.nav    { background: var(--accent); color: #fff; }
+.btn.xhs    { background: #ff2442; color: #fff; }
+.btn.dp     { background: #ffa700; color: #fff; }
+.btn.rsv    { background: var(--tint-green); color: #fff; }
+
+/* Action Sheet */
+.as-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,.35); backdrop-filter: blur(2px);
+  display: flex; align-items: flex-end; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity .25s;
+}
+.as-overlay.show { opacity: 1; pointer-events: auto; }
+.as-sheet {
+  width: 100%; max-width: 420px;
+  padding: 0 8px 34px;
+  transform: translateY(100%); transition: transform .3s cubic-bezier(.22,1,.36,1);
+}
+.as-overlay.show .as-sheet { transform: translateY(0); }
+.as-group {
+  background: rgba(255,255,255,.88); backdrop-filter: blur(20px);
+  border-radius: 14px; overflow: hidden; margin-bottom: 8px;
+}
+.as-group .as-item {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 16px; font-size: 18px; color: #007aff; font-weight: 500;
+  border: none; background: none; width: 100%; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.as-group .as-item + .as-item { border-top: .5px solid rgba(0,0,0,.12); }
+.as-group .as-item:active { background: rgba(0,0,0,.06); }
+.as-cancel { font-weight: 600; }
+
+/* Details — default open */
+.details {
+  margin-top: 10px; padding-top: 10px;
+  border-top: .5px solid var(--separator);
+  font-size: 13px; color: var(--text-secondary); line-height: 1.6;
+}
+.details.closed { display: none; }
+
+/* ── Overview day list ── */
+.day-list .card { margin-bottom: 8px; }
+.day-list .card .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+
+/* ── Payment summary ── */
+.pay-summary { background: var(--bg-elevated); border-radius: var(--radius-md); padding: 14px 16px; box-shadow: var(--shadow-sm); font-size: 13px; line-height: 1.7; margin-bottom: 10px; }
+.pay-summary h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.pay-summary .warn { color: var(--tint-red); }
+.pay-summary .ok-text { color: var(--tint-green); }
+
+/* ── Legend ── */
+.legend { display: flex; gap: 14px; flex-wrap: wrap; padding: 8px 0; font-size: 12px; color: var(--text-secondary); }
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+/* ── Leaflet overrides ── */
+.leaflet-popup-content-wrapper { border-radius: var(--radius-md) !important; box-shadow: var(--shadow-lg) !important; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif !important; }
+.leaflet-popup-content { font-size: 14px !important; line-height: 1.5 !important; margin: 12px 14px !important; }
+.leaflet-popup-content a { color: var(--accent) !important; }
+.leaflet-popup-tip { background: #fff !important; }
+.leaflet-control-zoom a { width: 34px !important; height: 34px !important; line-height: 34px !important; font-size: 16px !important; border-radius: 10px !important; background: rgba(255,255,255,.85) !important; -webkit-backdrop-filter: blur(10px) !important; backdrop-filter: blur(10px) !important; border: .5px solid var(--separator) !important; color: var(--text-primary) !important; }
+.leaflet-control-zoom { border-radius: 12px !important; overflow: hidden; box-shadow: var(--shadow-md) !important; border: none !important; }
+.leaflet-control-attribution { font-size: 9px !important; opacity: .5; }
 </style>
 </head>
 <body>
-<div id="offline" class="offline">当前离线：行程仍可查看；地图底图、天气链接与导航需要网络。</div>
-<header class="hero"><div class="wrap"><div class="eyebrow">YELLOWSTONE ROAD BOOK · 2026.09.05—09.09</div><h1>黄石秋日自驾</h1><p>Bozeman → 320 Guest Ranch → West Yellowstone → Canyon & Hayden → Lamar Valley → Bozeman</p><div class="route"><span>9/5 抵达 BZN</span><span>9/6 老忠实 · 大棱镜</span><span>9/7 峡谷 · 海登谷</span><span>9/8 北线 · Lamar</span><span>9/9 黎明观兽 · 返程</span></div><div class="deadline">✈ <span>9/9 15:23 从 BZN 起飞<br><b>目标 12:00 前抵达机场</b></span></div></div></header>
-<nav class="quick"><div class="wrap"><a href="#overview">总览</a><a href="#map-section">地图</a><a href="#d0">9/5</a><a href="#d1">9/6</a><a href="#d2">9/7</a><a href="#d3">9/8</a><a href="#d4">9/9</a><a href="#tips">提醒</a></div></nav>
-<main>
-<section class="section" id="overview"><div class="wrap"><h2>出发前总览</h2><p class="lead">行程是参考坐标，不是执行脚本。9/6 与 9/7 可根据中午阳光整体互换。</p><div class="weather"><div class="wx"><b>9/6</b><strong>🌦</strong><span>云多，可能阵雨</span></div><div class="wx"><b>9/7</b><strong>🌦</strong><span>早晨阵雨，云量变化</span></div><div class="wx"><b>9/8</b><strong>⛅</strong><span>目前相对晴朗</span></div><div class="wx"><b>清晨</b><strong>0–5°C</strong><span>Cooke City 可能近冰点</span></div></div><div class="swap"><b>大棱镜决策规则</b><br>9/5 晚比较 9/6、9/7 的逐小时预报。哪天 11:00–14:00 阳光更好，就把“老忠实＋大棱镜”完整放在哪天；不要只拆大棱镜，避免重复跑西南线。</div><h2 style="margin-top:34px">住宿与航班</h2><div class="grid stay-grid"><article class="card stay"><span class="date">9/5 · 1 NIGHT</span><h3>320 Guest Ranch</h3><address>205 Buffalo Horn Creek Rd, Gallatin Gateway, MT</address><div class="actions"><a class="btn" data-nav="320 Guest Ranch Montana">导航</a></div></article><article class="card stay"><span class="date">9/6—9/7 · 2 NIGHTS</span><h3>The Pioneer Motel</h3><address>515 Madison Ave, West Yellowstone, MT</address><div class="actions"><a class="btn" data-nav="The Pioneer Motel West Yellowstone">导航</a></div></article><article class="card stay"><span class="date">9/8 · 1 NIGHT</span><h3>Soda Butte Lodge</h3><address>210 Main Street, Cooke City, MT</address><div class="actions"><a class="btn" data-nav="210 Main Street Cooke City MT">导航</a></div></article><article class="card stay"><span class="date">9/9 · FLIGHT</span><h3>BZN 15:23 起飞</h3><p>目标 11:30–12:00 抵达，预留加油、还车和值机。</p><div class="actions"><a class="btn" data-nav="Bozeman Yellowstone International Airport">机场导航</a></div></article></div></div></section>
-<section class="section" id="map-section"><div class="wrap"><h2>全程地图</h2><p class="lead">按每天分别连线；点击标记可查看时间并导航。</p><div id="map"></div><p class="map-note">底图需联网；虚线只代表站点顺序，不等于实际道路。</p></div></section>
-<section class="section"><div class="wrap"><h2>逐日路书</h2><p class="lead">停车、动物堵车、天气和道路施工都可能增加时间；可跳过项已经标明。</p><div id="days" class="days"></div></div></section>
-<section class="section" id="tips"><div class="wrap"><h2>出发前提醒</h2><div class="grid tips"><article class="card"><span class="tip-no">01</span><h3>离线与实时信息</h3><p>下载离线地图和 NPS App。每天出门前检查园内道路、天气和老忠实喷发预测。</p></article><article class="card"><span class="tip-no">02</span><h3>保暖与补给</h3><p>带防水外层、抓绒或薄羽绒、帽子手套、热饮、早餐和车载水。离开西黄石前加满油。</p></article><article class="card"><span class="tip-no">03</span><h3>野生动物</h3><p>熊、狼、美洲狮至少 100 码；其他大型动物至少 25 码。只停正规停车位。</p></article></div></div></section>
-</main>
-<footer class="wrap disclaimer">天气摘要为 2026-09-03 规划时的参考，出发前须复核。道路、施工、喷发预测、停车和旅行时间会临时变化；以 NPS、天气部门、航空公司及地图 App 的实时信息为准。</footer>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<div id="map"></div>
+<div class="tabs" id="tabs"></div>
+<div class="content" id="content"></div>
+
 <script>
-const official={roads:'https://www.nps.gov/yell/planyourvisit/parkroads.htm',geyser:'https://www.nps.gov/yell/planyourvisit/geyser-activity.htm',weather:'https://forecast.weather.gov/MapClick.php?lat=44.6558&lon=-111.0856'};
-const days=[
-{id:'d0',date:'9月5日 · 周六',theme:'抵达 Bozeman · 牧场落地休息',tips:'落地日不进黄石，不塞景点。先采购、取车并把身体状态调整好。',color:'#8b6f47',stops:[
-['12:23','Bozeman Yellowstone International Airport','抵达','取行李、取车，预计 13:45 左右离开机场。','如有托运行李，把取车缓冲放宽到 90 分钟。',45.7777,-111.153],
-['13:45–15:30','Bozeman / Four Corners 补给','补给','买水、早餐、路餐、熊喷和保暖用品。','进入 Gallatin Canyon 后采购选择明显减少。',45.668,-111.184],
-['约 15:30','320 Guest Ranch','住宿','入住后在牧场附近散步、休息，晚餐尽量就近解决。','不要当天继续开进黄石。',45.103,-111.215,'hotel']]},
-{id:'d1',date:'9月6日 · 周日',theme:'老忠实第一站 · 大棱镜中午走 Trail',tips:'06:00–06:15 带齐行李退房。进入公园后不停车看景，Old Faithful 必须是当天第一站。',color:'#c95f3f',stops:[
-['06:00–06:15','320 Guest Ranch','出发','经 West Yellowstone、西门、Madison 直达 Old Faithful。','预留入口、施工和野牛堵车时间。',45.103,-111.215],
-['08:15–09:30','Old Faithful','第一站','先看下一次喷发预测；等待较久可先走 Geyser Hill 小环线。','喷发时间以现场游客中心或 NPS App 为准。',44.4605,-110.8281,null,official.geyser],
-['09:30–11:30','Upper Geyser Basin','景点','沿木栈道看 Castle、Grand Geyser 一带，按喷发预测调整。','不要为了走完整盆地耽误大棱镜中午光线。',44.4666,-110.8368],
-['11:30–12:00','Old Faithful 用餐区','午餐','快速午餐或吃自带路餐。','不安排需等位的正餐。',44.4598,-110.831],
-['12:30–14:15','Grand Prismatic Overlook Trail','核心','从 Fairy Falls 停车场出发，往返约 1.2 英里，俯瞰完整色带。','导航别设成 Midway 主停车场；雷暴临近不要上开放步道。',44.5158,-110.8325,null,'https://www.nps.gov/thingstodo/yell-trail-grand-prismatic-overlook.htm'],
-['14:30–15:30','Midway Geyser Basin','可跳过','从木栈道近看大棱镜，与 Trail 的俯瞰视角不同。','停车排队过长、下雨或体力不足就跳过。',44.5251,-110.8382,'skip'],
-['16:00–17:00','Fountain Paint Pot','可跳过','短栈道收尾，热泉、泥锅和喷气孔集中。','天气恶化或已疲劳就直接回酒店。',44.5489,-110.8063,'skip'],
-['约 18:00','The Pioneer Motel','住宿','入住西黄石，连住两晚。','补充第二天早餐和车载水。',44.6608,-111.1043,'hotel']]},
-{id:'d2',date:'9月7日 · 周一',theme:'黄石大峡谷 · Hayden Valley · 黄石湖',tips:'Labor Day 车流可能较多，06:30 出发。峡谷优先 Artist Point；下午把节奏留给 Hayden Valley。',color:'#3e7c74',stops:[
-['06:30','The Pioneer Motel','出发','经 Madison、Norris 前往 Canyon Village。','当天不进 Norris，避免摊薄峡谷与动物观察时间。',44.6608,-111.1043],
-['08:15–10:45','Artist Point / South Rim','核心','先看 Artist Point，再按体力选择 Upper Falls View。','小雨仍可参观；雷暴或步道湿滑时缩短。',44.7212,-110.4794],
-['10:45–11:30','Brink of Upper Falls','可调整','近距离看 Upper Falls，步道有坡度。','路面湿滑或停车困难时跳过。',44.7139,-110.4991,'skip'],
-['11:30–12:30','Canyon Village','午餐','吃饭、补水和加油。','园内餐饮只当补给，不为排队卡死时间。',44.7352,-110.487],
-['12:45–13:45','Lookout Point / North Rim','可调整','北缘只选 1–2 个观景点。','Brink of Lower Falls 回程较累，视体力决定。',44.7218,-110.4877,'skip'],
-['14:15–15:00','Mud Volcano','景点','短栈道体验泥浆泉和强烈硫磺气味。','雷雨临近时不要走开放栈道。',44.625,-110.4348],
-['15:00–17:30','Hayden Valley','观兽','慢速穿过并在正规停车带观察；越接近傍晚越好。','不要停车在行车道，也不要接近野牛。',44.6455,-110.458],
-['17:30–18:00','Yellowstone Lake / Fishing Bridge','可跳过','天气和体力允许时短停湖边。','返程较远，时间不足直接取消。',44.5646,-110.3695,'skip'],
-['约 20:00','The Pioneer Motel','住宿','经 Hayden、Canyon、Norris 返回西黄石。','天黑后注意动物上路。',44.6608,-111.1043,'hotel']]},
-{id:'d3',date:'9月8日 · 周二',theme:'Norris · Mammoth · Tower · Lamar 傍晚',tips:'07:00 退房后不返回西黄石。目前这天相对晴朗，北线施工需留 30–60 分钟总缓冲。',color:'#6b7f3a',stops:[
-['07:00','The Pioneer Motel','退房','带齐行李，经 Madison 前往 Norris。','出发前加满油并带晚餐备用食物。',44.6608,-111.1043],
-['08:00–09:45','Norris Geyser Basin','可跳过','以 Porcelain Basin 为主，控制停留时间。','停车困难或前两天有补课任务时可取消。',44.7267,-110.7047,'skip'],
-['11:15–13:00','Mammoth Hot Springs','景点','走 Lower Terraces 精华段并午餐。','留意发情期 elk，保持至少 25 码。',44.9705,-110.7033],
-['14:15–14:45','Calcite Springs Overlook','可调整','北上 Tower 途中短停。','与 Tower Fall 二选一，不做深度徒步。',44.9008,-110.4166,'skip'],
-['15:00–15:30','Tower Fall','可跳过','前往 Lamar 前的顺路短停。','施工或堵车耗时多时直接略过。',44.8914,-110.3875,'skip'],
-['16:00–19:00','Lamar Valley','观兽','Slough Creek、Lamar Buffalo Ranch、Soda Butte 依次观察。','只停正规停车带；熊狼 100 码、其他动物 25 码。',44.8976,-110.2368],
-['约 19:30','210 Main Street, Cooke City','住宿','入住 Soda Butte Lodge，准备次日早餐和热饮。','提前确认晚餐营业时间。',45.0204,-109.9343,'hotel']]},
-{id:'d4',date:'9月9日 · 周三',theme:'Lamar 黎明观兽 · 返回 BZN',tips:'05:30 带齐行李退房。08:00 左右开始向西撤离；不走 Beartooth Highway 去 Red Lodge。',color:'#495f79',stops:[
-['05:30','210 Main Street, Cooke City','退房','带行李出发，不再返回酒店。','穿保暖层，带早餐、热饮和望远镜。',45.0204,-109.9343],
-['约 06:00','Soda Butte Valley','观兽','东北门进入后的第一段开阔观察区。','天未完全亮，慢速驾驶并留意动物。',44.9746,-110.0108],
-['06:30–08:00','Lamar Valley','核心','在 Lamar Buffalo Ranch、Slough Creek 一带观察。','看到望远镜人群也必须停进正式停车带。',44.8976,-110.2368],
-['08:00','Lamar Valley 西行撤离','硬截止','经 Tower、Mammoth、Gardiner、Livingston 前往 BZN。','若出现降雪、结冰或动物堵车，提前至 07:30 离开。',44.9166,-110.4174],
-['约 09:30','Mammoth / Gardiner','通过','只作洗手间或快速补给，不再游览台地。','机场日不新增景点。',44.988,-110.701],
-['11:30–12:00','Bozeman Yellowstone International Airport','硬截止','加油、还车和值机；15:23 起飞。','目标中午前到达，给园内堵车留缓冲。',45.7777,-111.153,'hotel']]}
+// ╔══════════════════════════════════════════════════════════════╗
+// ║  REPLACE THIS SECTION — Hotel and Days data                 ║
+// ╚══════════════════════════════════════════════════════════════╝
+
+const HOTEL = { name: 'Pioneer Motel · West Yellowstone', lat: 44.66163, lng: -111.10594 };
+
+const DAYS = [
+  { id: 0, label: '总览', color: '#0071e3', locations: [] },
+  {
+    id: 1,
+    label: '9/5 周六',
+    date: '晴 · Bozeman 约 27°C / 8°C · 落地、采购、入住牧场',
+    title: 'BZN · Costco · 320 Guest Ranch',
+    color: '#ff9500',
+    locations: [
+      {
+        name: 'Bozeman Yellowstone International Airport',
+        lat: 45.77750,
+        lng: -111.15300,
+        type: 'transport',
+        time: '12:23',
+        desc: '12:23 落地，取车后先去 Costco；预计 13:30 左右驶离机场。',
+        detail: '落地日不赶园内景点。取车时确认备胎、玻璃水和还车加油规则。',
+        gmap: 'Bozeman+Yellowstone+International+Airport'
+      },
+      {
+        name: 'Costco Wholesale Bozeman',
+        lat: 45.70269,
+        lng: -111.07064,
+        type: 'transport',
+        time: '13:45–15:00',
+        desc: '采购水、早餐、路餐、水果和电解质饮料；周六普通会员营业至 19:00。',
+        detail: '控制采购量，优先常温食品；全程不要把有气味的食物留在车外。',
+        gmap: 'Costco+Wholesale+2505+Catron+St+Bozeman+MT'
+      },
+      {
+        name: '320 Guest Ranch',
+        lat: 45.10964,
+        lng: -111.25093,
+        type: 'hotel',
+        time: '约 16:15',
+        desc: '入住并休息。傍晚只在牧场和 Gallatin River 周边轻松活动。',
+        detail: '晚饭后整理第二天早餐、路餐与保暖层，下载离线地图，尽量早睡。',
+        gmap: '320+Guest+Ranch+Big+Sky+MT'
+      }
+    ]
+  },
+  {
+    id: 2,
+    label: '9/6 周日',
+    date: '晴到少云 · 约 7–22°C · 把最好光线留给热泉',
+    title: '老忠实泉 · 大棱镜',
+    color: '#34c759',
+    locations: [
+      {
+        name: '320 Guest Ranch 退房',
+        lat: 45.10964,
+        lng: -111.25093,
+        type: 'hotel',
+        time: '05:30–05:45',
+        desc: '带齐行李和早餐退房，沿 US-191 直接前往黄石西门。',
+        detail: '清晨低温，车内备薄羽绒或抓绒；出发前再次确认西门道路状态。',
+        gmap: '320+Guest+Ranch+Big+Sky+MT'
+      },
+      {
+        name: 'Old Faithful',
+        lat: 44.46047,
+        lng: -110.82814,
+        type: 'spot',
+        time: '约 07:30',
+        desc: '抵达后先看 NPS App 或现场下一次喷发预测，再决定先等喷发还是先走栈道。',
+        detail: '早晨人少、停车更稳。老忠实泉并非整点喷发，所有时间以当天官方预测为准。',
+        info: 'https://www.nps.gov/yell/planyourvisit/exploreoldfaithful.htm',
+        gmap: 'Old+Faithful+Yellowstone'
+      },
+      {
+        name: 'Upper Geyser Basin',
+        lat: 44.46307,
+        lng: -110.83627,
+        type: 'spot',
+        time: '08:15–10:45',
+        desc: '看完喷发后走 Old Faithful 周边精华栈道。',
+        detail: 'Castle、Grand 一带优先；Morning Glory Pool 只在体力和喷发节奏合适时增加。',
+        gmap: 'Upper+Geyser+Basin+Yellowstone'
+      },
+      {
+        name: 'Grand Prismatic Overlook',
+        lat: 44.51896,
+        lng: -110.83270,
+        type: 'spot',
+        time: '12:30–14:00',
+        desc: '从 Fairy Falls Trailhead 往返约 1.2 英里，下午温度较高、蒸汽较容易散开。',
+        detail: '停车很有限。若满位，先去 Midway 木栈道或 Fountain Paint Pot，15:00 左右再回来尝试。',
+        gmap: 'Grand+Prismatic+Spring+Overlook'
+      },
+      {
+        name: 'Midway Geyser Basin',
+        lat: 44.52505,
+        lng: -110.83819,
+        type: 'spot',
+        optional: true,
+        time: '14:15–15:00',
+        desc: '从地面木栈道近看 Grand Prismatic Spring 与 Excelsior Geyser。',
+        detail: '若停车排队过长，优先保留 Overlook，地面木栈道可以跳过。',
+        gmap: 'Midway+Geyser+Basin'
+      },
+      {
+        name: 'Fountain Paint Pot',
+        lat: 44.54897,
+        lng: -110.80644,
+        type: 'spot',
+        optional: true,
+        time: '15:30–16:15',
+        desc: '顺路短环线，集中看泥浆锅、喷气孔、热泉与间歇泉。',
+        detail: '当天弹性点；大棱镜停车耽误或体力下降时直接取消。',
+        gmap: 'Fountain+Paint+Pot+Yellowstone'
+      },
+      {
+        name: 'Pioneer Motel',
+        lat: 44.66163,
+        lng: -111.10594,
+        type: 'hotel',
+        time: '约 17:30–18:30',
+        desc: '入住 West Yellowstone；9/6、9/7 连住两晚。',
+        detail: '晚餐以镇内顺路、不排长队为准；补充饮用水并查看第二天降雨雷达。',
+        gmap: 'Pioneer+Motel+515+Madison+Ave+West+Yellowstone+MT+59758'
+      }
+    ]
+  },
+  {
+    id: 3,
+    label: '9/7 周一',
+    date: '阵雨、明显降温 · 约 5–16°C · 短步行与车览为主',
+    title: '黄石大峡谷 · Hayden · 湖区',
+    color: '#af52de',
+    locations: [
+      {
+        name: 'Pioneer Motel 出发',
+        lat: 44.66163,
+        lng: -111.10594,
+        type: 'hotel',
+        time: '07:30',
+        desc: '天亮后看实时雷达再出发，穿防水外层并带干袜子。',
+        detail: '若雷雨持续，可再晚一点出发；当天重点景观不依赖强光。',
+        gmap: 'Pioneer+Motel+515+Madison+Ave+West+Yellowstone+MT+59758'
+      },
+      {
+        name: 'Brink of the Upper Falls',
+        lat: 44.71466,
+        lng: -110.50077,
+        type: 'spot',
+        optional: true,
+        time: '09:15',
+        desc: '短距离接近 Upper Falls 顶部；雨天台阶和坡道湿滑。',
+        detail: '如遇大雨、雷电或步道临时关闭，不勉强下行。',
+        gmap: 'Brink+of+Upper+Falls+Yellowstone'
+      },
+      {
+        name: 'Artist Point',
+        lat: 44.72179,
+        lng: -110.47988,
+        type: 'spot',
+        time: '10:30',
+        desc: 'Lower Falls 与黄石大峡谷的经典视角，是当天不可删的核心点。',
+        detail: '阴天仍适合观看。峡谷区只留一个观景点时，就保留这里。',
+        gmap: 'Artist+Point+Yellowstone'
+      },
+      {
+        name: 'Hayden Valley',
+        lat: 44.64025,
+        lng: -110.47957,
+        type: 'spot',
+        time: '12:30–14:00',
+        desc: '慢速车览，在正规停车区观察野牛、麋鹿和远处动物。',
+        detail: '雨雾太重时不久等；遇动物堵车要主动压缩后续湖区。',
+        gmap: 'Hayden+Valley+Yellowstone'
+      },
+      {
+        name: 'Mud Volcano',
+        lat: 44.62504,
+        lng: -110.43365,
+        type: 'spot',
+        optional: true,
+        time: '14:00–14:45',
+        desc: 'Hayden Valley 南端的泥浆锅与硫磺地热区，短环线顺路。',
+        detail: '雷电或持续大雨时可取消，不要在暴露栈道停留。',
+        gmap: 'Mud+Volcano+Yellowstone'
+      },
+      {
+        name: 'Lake Yellowstone Hotel',
+        lat: 44.54982,
+        lng: -110.40067,
+        type: 'spot',
+        optional: true,
+        time: '15:15',
+        desc: '天气不佳时可在酒店公共区域休息、取暖，再判断是否继续 West Thumb。',
+        detail: '这是雨天缓冲点，不是必须消费或久留的目的地。',
+        gmap: 'Lake+Yellowstone+Hotel'
+      },
+      {
+        name: 'West Thumb Geyser Basin',
+        lat: 44.41551,
+        lng: -110.57291,
+        type: 'spot',
+        optional: true,
+        time: '约 16:00',
+        desc: '黄石湖边热泉木栈道，仅在雨势减弱且无雷电时游览。',
+        detail: '当天第一可删点。持续降雨时直接经 Old Faithful、Madison 返回西黄石。',
+        gmap: 'West+Thumb+Geyser+Basin'
+      },
+      {
+        name: 'Pioneer Motel',
+        lat: 44.66163,
+        lng: -111.10594,
+        type: 'hotel',
+        time: '约 18:30–19:30',
+        desc: '返回 West Yellowstone，换下湿衣物并准备次日北线转场。',
+        detail: '若当天因雷雨提前结束，可早点休息，不把删掉的湖区硬塞到 9/8。',
+        gmap: 'Pioneer+Motel+515+Madison+Ave+West+Yellowstone+MT+59758'
+      }
+    ]
+  },
+  {
+    id: 4,
+    label: '9/8 周二',
+    date: '晴到少云 · 约 5–18°C · 北环线与傍晚观兽',
+    title: 'Norris · Mammoth · Lamar Valley',
+    color: '#007aff',
+    locations: [
+      {
+        name: 'Pioneer Motel 退房',
+        lat: 44.66163,
+        lng: -111.10594,
+        type: 'hotel',
+        time: '06:45',
+        desc: '带齐行李退房，今天沿北环线前往 Cooke City，不再返回西黄石。',
+        detail: '车内备早餐、路餐、热饮、望远镜和保暖层；尽量在西黄石加满油。',
+        gmap: 'Pioneer+Motel+515+Madison+Ave+West+Yellowstone+MT+59758'
+      },
+      {
+        name: 'Norris Geyser Basin',
+        lat: 44.72520,
+        lng: -110.70310,
+        type: 'spot',
+        optional: true,
+        time: '08:15',
+        desc: '优先走 Porcelain Basin，控制在 60–90 分钟。',
+        detail: 'Back Basin 不走完整环线；停车困难或路况拖慢时缩短，不影响 Lamar 傍晚时段。',
+        gmap: 'Norris+Geyser+Basin'
+      },
+      {
+        name: 'Mammoth Hot Springs Terraces',
+        lat: 44.96715,
+        lng: -110.70481,
+        type: 'spot',
+        time: '10:45–12:30',
+        desc: '游览 Lower Terraces；Upper Terrace Drive 只在道路开放、时间宽松时增加。',
+        detail: 'Mammoth 常见麋鹿，保持至少 25 yards 距离，不要站在动物移动路径上。',
+        gmap: 'Mammoth+Hot+Springs+Terraces'
+      },
+      {
+        name: 'Tower Fall',
+        lat: 44.89137,
+        lng: -110.38793,
+        type: 'spot',
+        optional: true,
+        time: '约 14:00',
+        desc: '东北线顺路短停，时间不足时直接跳过。',
+        detail: '不要为了 Tower Fall 压缩 Lamar Valley 的傍晚观兽时间。',
+        gmap: 'Tower+Fall+Yellowstone'
+      },
+      {
+        name: 'Little America / Slough Creek',
+        lat: 44.94991,
+        lng: -110.30661,
+        type: 'spot',
+        time: '15:00–16:00',
+        desc: '进入东北动物走廊，在正规停车点寻找野牛、叉角羚和远处狼群观察者。',
+        detail: '不要沿路肩随意停车；看见架设长焦或望远镜的人群时，先确认是否有合法停车位。',
+        gmap: 'Slough+Creek+Yellowstone'
+      },
+      {
+        name: 'Lamar Valley',
+        lat: 44.91519,
+        lng: -110.16986,
+        type: 'spot',
+        time: '16:00–19:15',
+        desc: '傍晚慢速观兽，重点留意野牛、叉角羚、熊和远处狼群活动。',
+        detail: '熊、狼、美洲狮至少 100 yards；野牛、麋鹿等至少 25 yards。使用望远镜，不追逐动物。',
+        gmap: 'Lamar+Valley+Yellowstone'
+      },
+      {
+        name: 'Soda Butte Lodge',
+        lat: 45.01943,
+        lng: -109.93466,
+        type: 'hotel',
+        time: '约 19:45',
+        desc: '穿过东北门入住 Cooke City。',
+        detail: '晚餐不要拖得太晚；确认次日 Beartooth Highway 状态并把导航离线保存。',
+        gmap: 'Soda+Butte+Lodge+Cooke+City+MT'
+      }
+    ]
+  },
+  {
+    id: 5,
+    label: '9/9 周三',
+    date: '晴到多云 · 约 7–21°C · 只返机场，不增加正式景点',
+    title: 'Cooke City · BZN 返程',
+    color: '#8e8e93',
+    locations: [
+      {
+        name: 'Soda Butte Lodge 退房',
+        lat: 45.01943,
+        lng: -109.93466,
+        type: 'hotel',
+        time: '07:00',
+        desc: '带齐行李出发，目标 12:15–12:30 抵达 BZN。',
+        detail: '首选路线仅在 Beartooth Highway 实时开放、无结冰警告时使用。',
+        gmap: 'Soda+Butte+Lodge+Cooke+City+MT'
+      },
+      {
+        name: 'Beartooth Highway / Red Lodge 路线',
+        lat: 45.18578,
+        lng: -109.24638,
+        type: 'transport',
+        time: '首选',
+        desc: 'US-212 经 Beartooth Pass、Red Lodge，再接 I-90 前往 BZN。',
+        detail: '高海拔路线，出发前查实时道路与天气；关闭、结冰或浓雾时绝不尝试。',
+        info: 'https://www.nps.gov/yell/planyourvisit/parkroads.htm',
+        gmap: 'Red+Lodge+Montana'
+      },
+      {
+        name: 'Gardiner 备用路线',
+        lat: 45.03188,
+        lng: -110.70577,
+        type: 'transport',
+        time: '备用',
+        desc: '若 Beartooth 不安全，改走 Lamar—Tower—Mammoth—Gardiner—BZN。',
+        detail: '此路线有动物堵车风险，必须立即出发，不在 Lamar 或 Mammoth 增加游览。',
+        gmap: 'Gardiner+Montana'
+      },
+      {
+        name: 'Bozeman Yellowstone International Airport',
+        lat: 45.77750,
+        lng: -111.15300,
+        type: 'transport',
+        time: '目标 12:15–12:30',
+        desc: '机场附近加油、还车和值机；航班 15:23 出发。',
+        detail: '最晚按 12:30 到机场执行。不要因为沿途风景临时增加停留。',
+        gmap: 'Bozeman+Yellowstone+International+Airport'
+      }
+    ]
+  }
 ];
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const nav=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
-document.querySelectorAll('[data-nav]').forEach(a=>{a.href=nav(a.dataset.nav);a.target='_blank';a.rel='noopener'});
-document.querySelector('#days').innerHTML=days.map((d,i)=>`<article class="day" id="${d.id}"><header class="day-head"><span class="day-no">0${i+1}</span><div><h3>${d.date}</h3><p>${d.theme}</p></div></header><div class="card notice" style="margin-bottom:14px"><b>今日节奏</b><p>${d.tips}</p></div><div class="timeline">${d.stops.map(s=>`<article class="stop"><div class="time">${s[0]}</div><div class="stop-main"><div class="stop-top"><h4>${s[1]}</h4><span class="tag ${s[7]==='skip'?'skip':s[7]==='hotel'?'hotel':''}">${s[2]}</span></div><p class="note">${s[3]}</p><p class="caution">⚠ ${s[4]}</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="${nav(s[1])}">📍 导航</a>${s[8]?`<a class="btn secondary" target="_blank" rel="noopener" href="${s[8]}">官方信息</a>`:''}</div></div></article>`).join('')}</div>${d.id==='d1'?'<div class="swap"><b>天气换日：</b>若 9/7 中午明显更晴，把 9/6 与 9/7 两套行程完整互换。</div>':''}${d.id==='d4'?'<div class="final-alert"><strong>返程硬截止：12:00 前抵达 BZN</strong>Lamar 遇到明显堵车时提前离开，不安排 Mammoth 游览。</div>':''}</article>`).join('');
-function initMap(){const map=L.map('map',{scrollWheelZoom:false});L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:18}).addTo(map);const all=[];days.forEach((d,di)=>{const coords=[];d.stops.forEach((s,si)=>{coords.push([s[5],s[6]]);all.push([s[5],s[6]]);const icon=L.divIcon({className:'route-pin',html:`<span><i>${di+1}.${si+1}</i></span>`,iconSize:[30,30],iconAnchor:[15,26]});L.marker([s[5],s[6]],{icon}).addTo(map).bindPopup(`<b>${esc(s[1])}</b><br>${esc(d.date)} · ${esc(s[0])}<br><a target="_blank" href="${nav(s[1])}">打开导航</a>`) });if(coords.length>1)L.polyline(coords,{dashArray:'6 9',weight:3,color:d.color,opacity:.7}).addTo(map)});map.fitBounds(all,{padding:[28,28]})}
-if(window.L)initMap();else document.querySelector('#map').innerHTML='<div class="card">地图未加载，请联网刷新。</div>';
-function online(){document.querySelector('#offline').style.display=navigator.onLine?'none':'block'}addEventListener('online',online);addEventListener('offline',online);online();
+
+// 景点实景图：使用 Commons 缩略图链接，当前日期切换后才会渲染。
+const SPOT_PHOTOS = {
+  'Old Faithful': {
+    file: 'Yellowstone National Park (WY, USA), Old Faithful Geyser -- 2022 -- 2599.jpg',
+    credit: 'Dietmar Rabich · Commons'
+  },
+  'Upper Geyser Basin': {
+    file: 'Castle and Grand Geyser in the Upper Geyser Basin (22525261554).jpg',
+    credit: 'Yellowstone NPS · Commons'
+  },
+  'Grand Prismatic Overlook': {
+    file: 'Aerial image of Grand Prismatic Spring (view from the south).jpg',
+    credit: 'NPS · Commons'
+  },
+  'Midway Geyser Basin': {
+    file: 'Grand Prismatic Spring, Yellowstone NP.jpg',
+    credit: 'Supercarwaar · Commons'
+  },
+  'Fountain Paint Pot': {
+    file: 'Fountain Paint Pot (35384454652).jpg',
+    credit: 'Yellowstone NPS · Commons'
+  },
+  'Brink of the Upper Falls': {
+    file: 'Brink of the Upper Falls (53148383342).jpg',
+    credit: 'Yellowstone NPS · Commons'
+  },
+  'Artist Point': {
+    file: "Artist Point. Yellowstone. NP (30611961461).jpg",
+    credit: 'Wikimedia Commons'
+  },
+  'Hayden Valley': {
+    file: 'Herd of bison in Hayden Valley.jpg',
+    credit: 'Supercarwaar · Commons'
+  },
+  'Mud Volcano': {
+    file: 'Mud Volcano, Yellowstone NP.jpg',
+    credit: 'Supercarwaar · Commons'
+  },
+  'Lake Yellowstone Hotel': {
+    file: 'Lake Yellowstone Hotel YNP2.jpg',
+    credit: 'Acroterion · Commons'
+  },
+  'West Thumb Geyser Basin': {
+    file: 'West Thumb Geyser Basin - Yellowstone a jezero Yellowstone Lake - panoramio.jpg',
+    credit: 'Pavel Špindler · Commons'
+  },
+  'Norris Geyser Basin': {
+    file: 'Norris Geyser Basin east.jpg',
+    credit: 'Supercarwaar · Commons'
+  },
+  'Mammoth Hot Springs Terraces': {
+    file: 'Mammoth Hot Springs, Yellowstone.jpg',
+    credit: 'Supercarwaar · Commons'
+  },
+  'Tower Fall': {
+    file: 'Tower Fall in Yellowstone.JPG',
+    credit: 'Daniel Mayer · Commons'
+  },
+  'Little America / Slough Creek': {
+    file: 'Bison in the road near Tower Junction (97b4b671-6827-458c-b137-176277487c68).jpg',
+    credit: 'Yellowstone NPS · Commons'
+  },
+  'Lamar Valley': {
+    file: 'Lamar Valley, Yellowstone NP - panoramio - Aaron Zhu (1).jpg',
+    credit: 'Aaron Zhu · Commons'
+  }
+};
+
+function commonsImage(file) {
+  return `https://commons.wikimedia.org/wiki/Special:Redirect/file/${encodeURIComponent(file)}?width=960`;
+}
+
+function commonsSource(file) {
+  return `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file)}`;
+}
+
+function spotPhoto(loc) {
+  if (loc.type !== 'spot') return '';
+  const photo = SPOT_PHOTOS[loc.name];
+  if (!photo) return '';
+  return `<figure class="spot-photo"><img src="${commonsImage(photo.file)}" alt="${loc.name} 实景" loading="lazy" decoding="async" onerror="this.closest('.spot-photo').classList.add('failed')"><a class="photo-credit" href="${commonsSource(photo.file)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${photo.credit}</a></figure>`;
+}
+
+// ╔══════════════════════════════════════════════════════════════╗
+// ║  REPLACE THIS SECTION — Overview tab content                ║
+// ╚══════════════════════════════════════════════════════════════╝
+
+function overviewContent() {
+  return `
+<div class="hero"><h1>黄石国家公园</h1><p class="subtitle">9/5–9/9 · Bozeman 往返 · 按天气重排</p></div>
+<div class="info-grid">
+  <div class="info-card"><div class="label">住宿</div><div class="value">9/5 320 Guest Ranch<br>9/6–7 Pioneer Motel<br>9/8 Soda Butte Lodge</div></div>
+  <div class="info-card"><div class="label">航班</div><div class="value">9/5 12:23 到 BZN<br>9/9 15:23 离开 BZN</div></div>
+  <div class="info-card"><div class="label">天气逻辑</div><div class="value">9/6 晴：热泉<br>9/7 雨：峡谷车览<br>9/8 转晴：Lamar</div></div>
+  <div class="info-card"><div class="label">核心原则</div><div class="value">行程是参考坐标<br>雷雨、路况、动物优先</div></div>
+</div>
+<div class="section-head">行程概览</div>
+<div class="day-list">${DAYS.slice(1).map(d=>'<div class="card" onclick="go('+d.id+')"><div class="name"><span class="dot" style="background:'+d.color+'"></span>'+d.label+' · '+d.title+'</div><div class="desc">'+d.date+'</div></div>').join('')}</div>
+<div class="section-head">执行提醒</div>
+<div class="pay-summary"><h4>OPTIONAL 怎么用</h4><div>带 OPTIONAL 的点都可以直接跳过，不需要换一天补：停车困难、下雨、动物堵车或体力下降时，先删这些点。</div></div>
+<div class="pay-summary"><h4>天气版优先级</h4><div>9/6 优先保留 <strong>Old Faithful + Grand Prismatic Overlook</strong>；9/7 雨天优先保留 <strong>Artist Point + Hayden Valley</strong>，West Thumb 可删；9/8 优先保留 <strong>Lamar Valley 傍晚</strong>。</div></div>
+<div class="pay-summary"><h4>最后一天原则</h4><div>9/9 07:00 从 Cooke City 出发，不增加正式景点。Beartooth Highway 开放且无结冰时走 Red Lodge；否则立刻改走 Gardiner，目标 12:15–12:30 到 BZN。</div></div>
+<div class="pay-summary"><h4>天气与路况</h4><div>高海拔天气会快速变化。每天出发前查看 NPS 道路、实时雷达与入口状态；雷电时离开暴露栈道，遇动物堵车就删弹性点。</div></div>
+<div class="pay-summary"><h4>野生动物距离</h4><div>熊、狼、美洲狮至少 100 yards；野牛、麋鹿等至少 25 yards。不要靠近、喂食或为拍照堵路。</div></div>
+<div class="section-head">图例</div>
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:var(--tint-red)"></div>餐厅</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--tint-blue)"></div>景点</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--tint-purple)"></div>酒吧</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--tint-orange)"></div>酒店</div>
+</div>`;
+}
+
+// ╔══════════════════════════════════════════════════════════════╗
+// ║  ENGINE — Do not modify below unless customizing behavior   ║
+// ╚══════════════════════════════════════════════════════════════╝
+
+const map = L.map('map', { center: [HOTEL.lat || 35.69, HOTEL.lng || 139.74], zoom: 12, zoomControl: false, attributionControl: true });
+L.control.zoom({ position: 'topright' }).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { maxZoom: 19 }).addTo(map);
+
+/* ── Geolocation ── */
+const LocateControl = L.Control.extend({
+  options: { position: 'bottomright' },
+  onAdd() {
+    const btn = L.DomUtil.create('button', 'locate-btn');
+    btn.innerHTML = '📍';
+    btn.title = '我的位置';
+    L.DomEvent.disableClickPropagation(btn);
+    btn.addEventListener('click', () => {
+      btn.classList.add('active');
+      map.locate({ setView: true, maxZoom: 15 });
+    });
+    this._btn = btn;
+    return btn;
+  }
+});
+new LocateControl().addTo(map);
+let locMarker, locCircle;
+map.on('locationfound', e => {
+  const r = e.accuracy / 2;
+  if (locMarker) { locMarker.setLatLng(e.latlng); locCircle.setLatLng(e.latlng).setRadius(r); }
+  else {
+    locMarker = L.marker(e.latlng, {
+      icon: L.divIcon({ className:'', html:'<div style="width:14px;height:14px;border-radius:50%;background:#007aff;border:2.5px solid #fff;box-shadow:0 0 6px rgba(0,122,255,.5)"></div><div class="loc-pulse" style="position:absolute;top:0;left:0"></div>', iconSize:[14,14], iconAnchor:[7,7] }),
+      zIndexOffset: 2000
+    }).addTo(map);
+    locCircle = L.circle(e.latlng, { radius: r, color: '#007aff', fillColor: '#007aff', fillOpacity: .08, weight: 1 }).addTo(map);
+  }
+});
+map.on('locationerror', () => {});
+
+function icon(color, emoji) {
+  return L.divIcon({ className: '', html: `<div style="width:28px;height:28px;border-radius:50%;background:${color};border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.18)">${emoji||''}</div>`, iconSize: [28,28], iconAnchor: [14,14], popupAnchor: [0,-16] });
+}
+
+if (HOTEL.lat) L.marker([HOTEL.lat, HOTEL.lng], { icon: icon('#ff9500','🏨'), zIndexOffset: 1000 }).addTo(map).bindPopup(`<b>${HOTEL.name}</b>`);
+
+let markers = [], polylines = [];
+const emojis = { food:'🍽️', spot:'📍', hotel:'🏨', transport:'🚃', drink:'🍺' };
+
+function clearMap() { markers.forEach(m=>map.removeLayer(m)); polylines.forEach(p=>map.removeLayer(p)); markers=[]; polylines=[]; }
+
+function showDay(idx) {
+  clearMap();
+  if (idx === 0) {
+    const pts = [];
+    DAYS.forEach(d => d.locations.forEach(l => { if(l.lat) pts.push([l.lat,l.lng]); }));
+    if(pts.length) map.fitBounds(pts, {padding:[30,30]});
+    DAYS.slice(1).forEach(d => {
+      d.locations.filter(l=>l.time!=='—').forEach(l => {
+        const m = L.circleMarker([l.lat,l.lng], { radius:4, fillColor:d.color, color:'#fff', weight:1.5, fillOpacity:.9 }).addTo(map).bindPopup(`<b>${l.name}</b><br><span style="color:#86868b">${d.label}</span>`);
+        markers.push(m);
+      });
+    });
+    return;
+  }
+  const day = DAYS.find(d=>d.id===idx);
+  if(!day) return;
+  const coords = [];
+  day.locations.forEach(l => {
+    if(!l.lat) return;
+    const m = L.marker([l.lat,l.lng], { icon: icon(day.color, emojis[l.type]||'📌') }).addTo(map);
+    const gmapQ = l.gmap||encodeURIComponent(l.name+' Yellowstone');
+    m.bindPopup(`<b>${l.name}</b>${l.time!=='—'?'<br><span style="color:#86868b">'+l.time+'</span>':''}<br>${l.desc}${l.budget?'<br><span style="color:#ff9500">'+l.budget+'</span>':''}<br><a href="#" onclick="event.preventDefault();openAS('${l.name.replace(/'/g,"\\'")}',${l.lat},${l.lng},'${gmapQ}')">📍 导航</a>${l.xhs?' · <a href="'+l.xhs+'" target="_blank">📕 小红书</a>':''}`);
+    markers.push(m);
+    if(l.time!=='—') coords.push([l.lat,l.lng]);
+  });
+  if(coords.length>1) { const pl = L.polyline(coords, { color:day.color, weight:2.5, opacity:.5, dashArray:'6,5' }).addTo(map); polylines.push(pl); }
+  if(coords.length) map.fitBounds(coords, { padding:[40,40], maxZoom:14 });
+}
+
+// ══════════ RENDER ══════════
+function payChips(pay) {
+  if(!pay) return '';
+  let h = '<div class="pays">';
+  const m = { cash:'💴', card:'💳', suica:'Suica', paypay:'PayPay', alipay:'支付宝', wechat:'微信' };
+  for(const [k,label] of Object.entries(m)) {
+    if(pay[k]!==undefined) { const c = pay[k]===1?'ok':pay[k]===0.5?'idk':'no'; h += `<span class="pay ${c}">${label}</span>`; }
+  }
+  return h+'</div>';
+}
+
+// ── 运行环境检测：在第三方 App 的 WebView 里，自定义 scheme 基本会被拦截 ──
+const IN_APP_WEBVIEW = (() => {
+  const ua = (navigator.userAgent || '').toLowerCase();
+  return /micromessenger|xhs|xhsdiscover|discover\/|tiktok|aweme|weibo|qq\/|qqbrowser|alipayclient|dingtalk|lark|feishu|ucbrowser|baiduboxapp|toutiao|newsarticle/.test(ua);
+})();
+
+function xhsKeyword(loc) {
+  if(loc.xhsKeyword) return loc.xhsKeyword.trim();
+  return (loc.name||'').replace(/⭐.*$/g,'').replace(/（.*?）/g,'').replace(/\(.*?\)/g,'').replace(/\s+/g,' ').trim();
+}
+function xhsAppUrl(loc) { return `xhsdiscover://search/result?keyword=${encodeURIComponent(xhsKeyword(loc))}&target_search=notes&source=deeplink`; }
+function xhsWebUrl(loc) { return `https://www.xiaohongshu.com/search_result?keyword=${encodeURIComponent(xhsKeyword(loc))}&source=web_explore_feed`; }
+
+function dpKeyword(loc) {
+  if(loc.dianpingKeyword) return loc.dianpingKeyword.trim();
+  return (loc.name||'').replace(/⭐.*$/g,'').replace(/（.*?）/g,'').replace(/\(.*?\)/g,'').replace(/\s+/g,' ').trim();
+}
+function dpAppUrl(loc) { return `dianping://searchshoplist?keyword=${encodeURIComponent(dpKeyword(loc))}`; }
+function dpWebUrl(loc) { return `https://m.dianping.com/searchshop?keyword=${encodeURIComponent(dpKeyword(loc))}`; }
+
+window._extLocs = {};
+DAYS.forEach(d => d.locations.forEach(l => { window._extLocs[`${d.id}::${l.name}`] = l; }));
+window._xhsLocs = window._extLocs;
+
+function openExt(key, kind) {
+  const loc = window._extLocs[key]; if(!loc) return false;
+  if (IN_APP_WEBVIEW) {
+    window.location.href = kind==='dp' ? dpWebUrl(loc) : xhsWebUrl(loc);
+  } else {
+    window.location.href = kind==='dp' ? dpAppUrl(loc) : xhsAppUrl(loc);
+  }
+  return false;
+}
+function openXhs(key) { return openExt(key, 'xhs'); }
+function openDp(key)  { return openExt(key, 'dp'); }
+
+function locCard(loc, dayIdx) {
+  const dot = loc.type==='food'?'food':loc.type==='spot'?'spot':loc.type==='drink'?'drink':loc.type==='hotel'?'hotel':'transport';
+  const typeBadge = loc.type==='food'?'<span class="badge food">餐</span>':loc.type==='spot'?'<span class="badge spot">景</span>':loc.type==='drink'?'<span class="badge drink">饮</span>':'';
+  const optionalBadge = loc.optional?'<span class="badge optional">OPTIONAL</span>':'';
+  const bdg = typeBadge + optionalBadge;
+  const uid = `d${dayIdx}-${loc.name.replace(/\W/g,'')}`;
+  const locKey = `${dayIdx}::${loc.name}`;
+  const gmapQ = loc.gmap||encodeURIComponent(loc.name+' Yellowstone');
+  let lnk = `<button class="btn nav" onclick="openAS('${loc.name.replace(/'/g,"\\'")}',${loc.lat},${loc.lng},'${gmapQ}')">📍 导航</button>`;
+  if(loc.xhs||loc.xhsKeyword) {
+    const xhsHref = IN_APP_WEBVIEW ? xhsWebUrl(loc) : xhsAppUrl(loc);
+    const xhsLabel = IN_APP_WEBVIEW ? '📕 小红书' : '📕 小红书 App';
+    lnk += `<a href="${xhsHref}" onclick="return openXhs('${locKey.replace(/'/g,"\\'")}')" class="btn xhs">${xhsLabel}</a>`;
+  }
+  const dpEnabled = loc.dianping !== false &&
+    (loc.dianping || loc.dianpingKeyword || loc.type==='food' || loc.type==='drink');
+  if(dpEnabled) {
+    const dpHref = IN_APP_WEBVIEW ? dpWebUrl(loc) : dpAppUrl(loc);
+    const dpLabel = IN_APP_WEBVIEW ? '🍜 大众点评' : '🍜 大众点评 App';
+    lnk += `<a href="${dpHref}" onclick="return openDp('${locKey.replace(/'/g,"\\'")}')" class="btn dp">${dpLabel}</a>`;
+  }
+  if(loc.reserve) lnk += `<a href="${loc.reserve}" target="_blank" class="btn rsv">📅 预约</a>`;
+  if(loc.info) lnk += `<a href="${loc.info}" target="_blank" class="btn rsv">ℹ️ 官方信息</a>`;
+  return `<div class="tl-item"><div class="tl-dot ${dot}"></div><div class="card" onclick="if(!event.target.closest('.btn,.links,.photo-credit'))toggle('${uid}')"><div class="time">${loc.time!=='—'?loc.time:'备选'}</div><div class="name">${bdg} ${loc.name}</div>${spotPhoto(loc)}<div class="desc">${loc.desc}</div>${loc.budget?'<div class="budget">'+loc.budget+'</div>':''}${payChips(loc.pay)}<div class="links">${lnk}</div>${loc.detail?'<div class="details" id="'+uid+'">'+loc.detail.replace(/\n/g,'<br>')+'</div>':''}</div></div>`;
+}
+
+function renderDay(idx) {
+  const d = DAYS.find(x=>x.id===idx); if(!d) return '';
+  const main = d.locations.filter(l=>l.time!=='—');
+  const alt = d.locations.filter(l=>l.time==='—');
+  let h = `<div class="day-head"><h2>${d.title}</h2><p>${d.date}</p></div>`;
+  if(main.length) { h += '<div class="section-head">行程</div><div class="timeline">'; main.forEach(l => h += locCard(l, idx)); h += '</div>'; }
+  if(alt.length) { h += '<div class="section-head">备选</div><div class="timeline">'; alt.forEach(l => h += locCard(l, idx)); h += '</div>'; }
+  return h;
+}
+
+// ══════════ NAV ══════════
+let cur = 0;
+const tabsEl = document.getElementById('tabs');
+const contentEl = document.getElementById('content');
+
+DAYS.forEach(d => {
+  const btn = document.createElement('button');
+  btn.className = 'tab' + (d.id===0?' active':'');
+  btn.dataset.day = d.id;
+  btn.textContent = d.label;
+  tabsEl.appendChild(btn);
+});
+
+function go(idx) {
+  cur = idx;
+  tabsEl.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', +t.dataset.day===idx));
+  contentEl.innerHTML = idx===0 ? overviewContent() : renderDay(idx);
+  showDay(idx);
+  contentEl.scrollTo({top:0});
+  const tab = tabsEl.querySelector(`[data-day="${idx}"]`);
+  if(tab) tab.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+}
+
+function toggle(id) { const el=document.getElementById(id); if(el) el.classList.toggle('closed'); }
+
+tabsEl.addEventListener('click', e => { const t=e.target.closest('.tab'); if(t) go(+t.dataset.day); });
+
+go(0);
+
+/* ── Action Sheet for Navigation ── */
+const asOverlay = document.createElement('div');
+asOverlay.className = 'as-overlay';
+asOverlay.innerHTML = `<div class="as-sheet">
+  <div class="as-group" id="as-opts"></div>
+  <div class="as-group"><button class="as-item as-cancel" onclick="closeAS()">取消</button></div>
+</div>`;
+document.body.appendChild(asOverlay);
+asOverlay.addEventListener('click', e => { if (e.target === asOverlay) closeAS(); });
+
+const IS_IOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+function amapAppUrl(name, lat, lng) {
+  const scheme = IS_IOS ? 'iosamap' : 'androidamap';
+  return `${scheme}://viewMap?sourceApplication=trip&poiname=${encodeURIComponent(name)}&lat=${lat}&lon=${lng}&dev=0`;
+}
+function amapWebUrl(name, lat, lng) {
+  return `https://uri.amap.com/marker?position=${lng},${lat}&name=${encodeURIComponent(name)}&src=trip&coordinate=wgs84&callnative=1`;
+}
+function openAmap(name, lat, lng) {
+  if (IN_APP_WEBVIEW) { window.open(amapWebUrl(name, lat, lng)); return; }
+  window.location.href = amapAppUrl(name, lat, lng);
+}
+
+function openAS(name, lat, lng, gmap) {
+  const q = gmap || encodeURIComponent(name + ' Yellowstone');
+  const encName = encodeURIComponent(name);
+  const safeName = name.replace(/'/g,"\\'");
+  // WebView 内 maps:// 通常被拦截，改用 https Apple Maps URL —— iOS 系统会自动拉起 Apple Maps
+  const appleUrl = IN_APP_WEBVIEW
+    ? `https://maps.apple.com/?q=${lat},${lng}&ll=${lat},${lng}&name=${encName}`
+    : `maps://maps.apple.com/?q=${lat},${lng}&name=${encName}`;
+  const googleUrl = `https://www.google.com/maps/search/?api=1&query=${q}`;
+  document.getElementById('as-opts').innerHTML =
+    `<button class="as-item" onclick="window.open('${appleUrl}');closeAS()">🍎 Apple Maps</button>` +
+    `<button class="as-item" onclick="window.open('${googleUrl}');closeAS()">🗺️ Google Maps</button>` +
+    `<button class="as-item" onclick="openAmap('${safeName}',${lat},${lng});closeAS()">🧭 高德地图 App</button>`;
+  asOverlay.classList.add('show');
+}
+function closeAS() { asOverlay.classList.remove('show'); }
 </script>
 </body>
 </html>
