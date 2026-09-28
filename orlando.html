@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#132c29"><title>奥兰多 · 七园旅行手册</title><style>
+:root{--ink:#173530;--muted:#62736c;--paper:#f5f5ef;--line:#e0e5dc;--green:#245a47;--yellow:#dbec8d;--white:#fff;--radius:20px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:165px}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #de9d36;outline-offset:3px}.shell{max-width:1160px;margin:auto;padding:0 30px}.mast{padding:22px 0;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:2px;font-weight:700}.mast a{letter-spacing:0}.hero{position:relative;overflow:hidden;background:#173c33;color:white;border-radius:26px;padding:45px 44px;margin-bottom:22px}.hero:after{content:"";position:absolute;width:360px;height:360px;right:-70px;top:-170px;border:1px solid #badf9a66;border-radius:50%;box-shadow:0 0 0 45px #ffffff04,0 0 0 90px #ffffff04,0 0 0 135px #ffffff04;pointer-events:none}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:750;text-transform:uppercase;color:var(--muted)}.hero .eyebrow{color:#c9dea9}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.12;letter-spacing:-3px;margin:16px 0 14px;font-weight:800}.hero h1 span{color:var(--yellow)}.hero p{color:#deebe0;margin:0;max-width:620px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.tag{border:1px solid #ffffff3d;padding:4px 12px;border-radius:30px;font-size:12px}.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px}.fact{background:white;border:1px solid var(--line);border-radius:15px;padding:17px 20px}.fact small{display:block;color:var(--muted);font-size:11px;margin-bottom:5px}.fact b{font-size:19px;display:block}.fact span{font-size:12px;color:var(--muted)}.nav-shell{background:#f5f5eff2;backdrop-filter:blur(16px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.tabs{display:flex;gap:6px;padding:12px 0;overflow:auto}.tabs button{border:0;padding:10px 24px;border-radius:30px;white-space:nowrap;font-weight:650;color:var(--muted);background:transparent}.tabs button.active{background:var(--ink);color:white}.tabs .print{margin-left:auto;border:1px solid var(--line)}main{padding-top:26px!important;padding-bottom:70px!important}.panel{margin-bottom:40px}.js .panel{display:none}.js .panel.active{display:block}.section-intro{display:flex;justify-content:space-between;gap:20px;align-items:end;margin:0 0 20px}.section-intro h2{font-size:28px;letter-spacing:-1px;margin:0}.section-intro p{font-size:13px;color:var(--muted);margin:5px 0 0}.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:28px;margin-bottom:18px;box-shadow:0 4px 15px #17353003}.card h3{font-size:25px;line-height:1.4;margin:7px 0 18px;letter-spacing:-.5px}.card-top{display:flex;align-items:center;justify-content:space-between;gap:18px}.map-link{font-size:12px;white-space:nowrap;background:#f0f5e8;border-radius:25px;padding:7px 12px}.prose h2{font-size:22px;border-top:1px solid var(--line);padding-top:25px;margin-top:30px}p{margin:12px 0}strong{font-weight:700}ul{padding-left:22px;margin:14px 0}li{padding:4px 0}.table-wrap{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.65;text-align:left}th{background:#eff2eb;color:var(--muted);font-size:12px;font-weight:650;padding:12px 14px;white-space:nowrap}td{padding:13px 14px;border-top:1px solid #ecede7;vertical-align:top}tr.must-row{background:#f7faeb}tr.must-row td:first-child{color:#38672f;font-weight:700}tbody tr:hover{background:#f1f5e9}.park table td{min-width:100px}.park table td:nth-last-child(2){min-width:205px;font-weight:600}.park table td:last-child{min-width:190px;color:#55665d}.filter-box{background:white;border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:20px}.filter-grid{display:grid;grid-template-columns:1fr 240px auto;gap:10px;align-items:end}.field label{display:block;font-size:11px;color:var(--muted);margin-bottom:5px}.field input,.field select{width:100%;border:1px solid var(--line);border-radius:9px;background:#f8f9f5;padding:10px 12px;color:var(--ink);height:46px}.toggle{height:46px;border:1px solid var(--line);border-radius:9px;padding:8px 18px;background:white;color:var(--green);font-size:13px;font-weight:600;white-space:nowrap}.toggle.on{background:var(--green);color:white;border-color:var(--green)}.filter-status{font-size:12px;color:var(--muted);display:flex;gap:12px;justify-content:space-between;margin-top:12px}.filter-status button{border:0;background:none;color:var(--green);font-size:12px}.daynav{display:flex;gap:8px;overflow:auto;margin-bottom:20px;padding-bottom:5px}.daynav a{white-space:nowrap;background:#e9eee2;font-size:12px;padding:8px 14px;border-radius:30px}.day .eyebrow{color:#789250}.done-toggle{display:inline-flex;gap:7px;align-items:center;margin-right:7px;white-space:nowrap}.done-toggle input{width:16px;height:16px;accent-color:var(--green);cursor:pointer}.done-toggle span{font-size:10px;color:var(--muted);font-weight:400}.finished td{opacity:.6}.finished td:nth-last-child(2){text-decoration:line-through}.foot{color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;gap:15px}.empty{padding:40px;text-align:center;border:1px dashed var(--line);border-radius:16px;color:var(--muted)}[hidden]{display:none!important}.tip{padding:16px 20px;border-left:3px solid #91aa5b;background:#edf2e3;border-radius:0 12px 12px 0;font-size:13px;margin:18px 0}.quickdays{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0}.quickdays a{display:block;background:#f5f7ef;border-radius:12px;padding:14px 16px;font-size:13px}.quickdays b{display:block;font-size:15px}.download{font-size:12px}.js-only{display:none}.js .js-only{display:block}
+@media(max-width:700px){.shell{padding:0 17px}.mast{padding:17px 0;font-size:10px}.hero{padding:30px 24px;border-radius:20px}.hero h1{letter-spacing:-2px}.hero p{font-size:13px}.facts{grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:18px}.fact{padding:12px 15px}.fact b{font-size:17px}.tabs{gap:0}.tabs button{font-size:13px;padding:9px 15px}.tabs .print{display:none}.card{padding:20px 16px;border-radius:15px}.card h3{font-size:22px;overflow-wrap:anywhere}.card-top{display:block}.map-link{display:inline-block;margin-bottom:6px}.filter-grid{grid-template-columns:1fr 1fr}.field:first-child{grid-column:1/-1}.filter-grid select{font-size:13px}.section-intro h2{font-size:24px}.table-wrap{margin:15px -2px}.park table{font-size:12px}.park td{padding:11px 9px}.park table td:first-child{min-width:80px}.filter-status{font-size:11px}.foot{display:block}.quickdays{grid-template-columns:1fr}.tip{font-size:12px}html{scroll-padding-top:90px}}
+@media print{body{background:white;font-size:11px}.shell{max-width:none;padding:0}.hero{padding:20px;color:#173530;background:#edf2e3}.hero h1{font-size:32px}.hero h1 span,.hero p,.hero .eyebrow{color:#173530}.hero:after,.nav-shell,.filter-box,.daynav,.map-link,.done-toggle,.download,.mast a{display:none!important}.js .panel{display:block!important}.park[hidden],.table-wrap[hidden],tr[hidden],p[hidden],li[hidden]{display:revert!important}#empty{display:none!important}.card{box-shadow:none;padding:15px;border-radius:0;break-inside:auto}.table-wrap{overflow:visible}.park table td{min-width:0!important}table{font-size:10px}tr{break-inside:avoid}thead{display:table-header-group}.facts{margin-bottom:10px}.hero{margin-bottom:10px}.finished td{opacity:1}.finished td:nth-last-child(2){text-decoration:none}.foot{display:none}}
+</style></head><body><div class="shell"><header class="mast"><span>TRAVEL NOTES / FLORIDA 2026</span><a href="奥兰多旅行计划.md" download>下载 Markdown ↗</a></header><section class="hero"><div class="eyebrow">SEP 29 — OCT 06 · ORLANDO</div><h1>奥兰多，<br>把快乐<span>玩尽兴。</span></h1><p>七个乐园，一份随身手册。先把最想玩的留住，再给当天的天气、体力和惊喜留一点空间。</p><div class="tags"><span class="tag">成人 · 全刺激可玩</span><span class="tag">租车自驾</span><span class="tag">已订门票 · 日期不变</span><span class="tag">Vista Cay · 6 晚</span></div></section><div class="facts"><div class="fact"><small>ARRIVAL / 抵达</small><b>9.30 · 06:00</b><span>MCO 奥兰多机场</span></div><div class="fact"><small>DEPARTURE / 回程</small><b>10.06 · 16:36</b><span>MCO → SNA</span></div><div class="fact"><small>STAY / 住宿</small><b>Vista Cay</b><span>16:00 入住 · 11:00 退房</span></div><div class="fact"><small>EXPLORE / 乐园</small><b>Disney 4 + Universal 3</b><span>完整目录 · 必玩优先级</span></div></div></div>
+<div class="nav-shell"><nav class="shell tabs" aria-label="攻略栏目"><button class="active" data-tab="overview">行程总览</button><button data-tab="days">每天怎么玩</button><button data-tab="parks">七园项目库</button><button data-tab="practical">出行备忘</button><button class="print" onclick="window.print()">打印 / PDF</button></nav></div>
+<main class="shell"><section id="overview" class="panel active"><div class="section-intro"><div><span class="eyebrow">YOUR TRIP, AT A GLANCE</span><h2>日期照旧，重点更清楚。</h2><p>按你已经确定的园区顺序规划。所有建议钟点均为奥兰多当地时间。</p></div></div><div class="card prose"><div class="quickdays"><a href="#day-1"><b>9/30</b>Animal Kingdom → MK 可选 ↗</a><a href="#day-2"><b>10/1</b>EPCOT 全天 ↗</a><a href="#day-3"><b>10/2</b>Epic Universe 全天 ↗</a><a href="#day-4"><b>10/3</b>Hollywood Studios → MK ↗</a><a href="#day-5"><b>10/4</b>Disney Springs / Downtown · 休息 ↗</a><a href="#day-6"><b>10/5</b>Islands → Universal Studios Florida ↗</a><a href="#day-7"><b>10/6</b>Brunch · Lake Eola → 机场 ↗</a></div><p>你的安排能覆盖 7 个主题乐园；其中 10/3 与 10/5 是精选玩法，不能承诺两园全部刷完。项目目录尽量覆盖七园现有常规乘骑、固定演出、步行互动和角色体验；<strong>列全是方便选择，不是要求全玩</strong>。儿童项目也保留，但不占你的成人必玩名额。</p>
+<ul>
+<li><strong>★★★ 必玩</strong>：按你的成人刺激偏好优先保住；演出同样可能是必看。</li>
+<li><strong>★★ 推荐</strong>：时间允许就加；部分是经典体验，刺激度不高。</li>
+<li><strong>○ 可选</strong>：低龄向、短队补位、粉丝向，或休息时体验。</li>
+<li><strong>△ 条件项目</strong>：须当日有场次、满足资格或额外付费。</li>
+<li><strong>× 不可安排</strong>：已关闭、整修或不适用于本次日期。</li>
+</ul>
+<p>“必玩”是本攻略的主观优先级；运营状态来自下附官方信息。强刺激不等于不晕：屏幕模拟、旋转与倒退也可能造成晕动。</p><h2>航班、住宿与自驾</h2>
+<div class="table-wrap"><table><thead><tr><th>项目</th><th>你的安排 / 执行方式</th></tr></thead><tbody>
+<tr><td>去程</td><td>9/29 19:05 SNA 出发 → 9/30 06:00 MCO 抵达；截图未显示航空公司、航站楼及中转详情</td></tr>
+<tr><td>回程</td><td>10/6 16:36 MCO 出发 → 22:05 SNA 到达；提前在航司 App 核对航段和航站楼</td></tr>
+<tr><td>住宿</td><td>Luxurious, 3rd-Floor Condo at Vista Cay；链接日期对应 9/30—10/6，共 6 晚，最终以订单为准</td></tr>
+<tr><td>入住 / 退房</td><td>官方房源页：16:00 入住、11:00 退房；有停车设施，是否另收费、门禁、具体楼栋按房东说明</td></tr>
+<tr><td>9/30 行李</td><td>提前向管理方确认寄存/提前入住；未确认前不把“清晨到公寓睡觉”写入计划</td></tr>
+<tr><td>10/6 行李</td><td>建议早餐前或 11:00 前办完退房带走；不默认下午可返回房间拿行李</td></tr>
+</tbody></table></div>
+<p>这是公寓式房源，不应默认有酒店行李房，也不应因为 Marriott 品牌默认享有 Disney / Universal 提前入园或免费快通。导航输入订单中的具体地址，不要只搜索 Vista Cay；园区导航输入停车场入口。</p>
+<p><strong>自驾时间预算（规划估算，非实时导航）</strong>：Vista Cay 到 Epic 停车场约 10–20 分钟，到环球老两园停车楼约 15–25 分钟，到 Disney 各停车场约 25–45 分钟，到 MCO 约 20–35 分钟，到 Lake Eola 约 25–40 分钟。拥堵、收费站和事故会增加时间；另外给普通园区停车、安检、步行留 30–45 分钟，Magic Kingdom 留 45–75 分钟。</p>
+<p>房源营销文案中的“各大园区不到 10 分钟”不作为出发依据。房源和规则：<a href="https://homes-and-villas.marriott.com/en/properties/40087452-orlando-luxurious-3rd-floor-condo-at-vista-cay" target="_blank" rel="noopener noreferrer">Marriott 官方房源 ↗</a>。</p></div></section>
+<section id="days" class="panel"><div class="section-intro"><div><span class="eyebrow">THE DAILY PLAN</span><h2>每天怎么玩</h2><p>建议时间是参考坐标；园区营业、预约和天气优先。</p></div></div><nav class="daynav" aria-label="选择日期"><a href="#day-0">9/29 周二</a><a href="#day-1">9/30 周三</a><a href="#day-2">10/1 周四</a><a href="#day-3">10/2 周五</a><a href="#day-4">10/3 周六</a><a href="#day-5">10/4 周日</a><a href="#day-6">10/5 周一</a><a href="#day-7">10/6 周二</a></nav><article class="day card" id="day-0"><span class="eyebrow">DAY 00</span><h3>9/29 周二｜出发</h3><p>按航司建议提前到 SNA。随身包放 9/30 的衣物、雨衣、充电宝、防晒和常用物品，避免落地后翻大箱子。截图中没有足够信息判断是否直飞，以电子客票为准。</p></article><article class="day card" id="day-1"><span class="eyebrow">DAY 01</span><h3>9/30 周三｜Animal Kingdom → 体力允许再去 Magic Kingdom</h3><p><strong>06:00</strong> 落地 → 提行李、取车、早餐。给机场事务预留约 1.5–2 小时，延误就顺延入园，不为赶开门仓促驾驶。行李寄存有确认就先寄存；否则按车辆与行李条件决定是否直达园区，贵重物品随身带，避免把行李在停车场外露整理。</p>
+<p><strong>上午至约 15:00：Animal Kingdom</strong>。保底顺序是 Avatar Flight of Passage → Kilimanjaro Safaris → Festival of the Lion King → Expedition Everest。根据预约窗口和实际排队调整：飞行若已有下午时段，就先 Safari，尽量别把 Safari 留到离园前。午间看室内演出与吃饭。</p>
+<p><strong>约 16:00</strong> 回 Vista Cay 办入住、洗澡休息。晚上按你原方案二选一：</p>
+<ul>
+<li>精神好：约 17:30–18:00 出发去 Magic Kingdom；当晚只设“烟花 + 1–2 个项目”的目标。优先 TRON；若已在 10/3 安排其预约，则用 Haunted Mansion / Pirates 补位。</li>
+<li>累了：留在公寓休息。10/3 的 Magic Kingdom 与烟花保持不变，不挪任何日期。</li>
+</ul>
+<p>Disney 官方 2026 万圣节派对日期中<strong>没有 9/30、10/3</strong>，这两晚可按常规烟花方向规划；烟花具体时刻及天气取消仍看当天 App。<a href="https://disneyworld.disney.go.com/events-tours/magic-kingdom/mickeys-not-so-scary-halloween-party/" target="_blank" rel="noopener noreferrer">派对官方日期 ↗</a></p>
+<p>午餐在 Pandora 的快餐区，Satu’li Canteen 可作为候选；晚餐在公寓附近或 MK 入园后解决，第一晚不排必须赶到的桌餐。</p></article><article class="day card" id="day-2"><span class="eyebrow">DAY 02</span><h3>10/1 周四｜EPCOT 全天</h3><p>抵达停车场目标：<strong>普通开园前约 60 分钟</strong>。路线按热门项目预约优化，而不是固定绕圈。</p>
+<ul>
+<li>上午：Guardians of the Galaxy → Test Track → Soarin’；若 Guardians 预约在下午，先完成另外两项。</li>
+<li>中午：The Land 区吃饭与休息，顺带 Living with the Land。</li>
+<li>下午：Frozen → 世界橱窗沿湖各国区 → Remy；这两个热门项目可按较短排队或预约对调。</li>
+<li>晚上：世界橱窗吃饭，留看 Luminous；演出前约 30–45 分钟选择无遮挡湖边位置。</li>
+</ul>
+<p><strong>先保 Guardians、Test Track、Soarin’、Remy；Frozen 为下一优先。</strong> Mission: SPACE 橙色虽强刺激，但偏离心压迫、容易晕，不必为了刺激硬塞。当天美食酒摊可作补给，但自驾者安排无酒精饮料。Food &amp; Wine 节庆活动以官方当期安排为准。</p></article><article class="day card" id="day-3"><span class="eyebrow">DAY 03</span><h3>10/2 周五｜Epic Universe 全天</h3><p>导航到 <strong>Epic Universe 自己的停车场</strong>，不是 CityWalk。普通开园前约 60 分钟抵达；Vista Cay 住宿不作为提前入园资格。</p>
+<p>进园先看 Harry Potter and the Battle at the Ministry 与 Mine-Cart Madness 的运营和队伍，选一个先玩，另一个结合快通/低峰处理。参考顺序：<strong>Ministry → Berk → Nintendo → Dark Universe → Celestial 夜景</strong>，但预约和天气优先于这条环线。</p>
+<p><strong>当天五个核心</strong>：Battle at the Ministry、Monsters Unchained、Stardust Racers、Mine-Cart Madness、Hiccup’s Wing Gliders。Mario Kart 与 The Untrainable Dragon 是下一批重点；尽量至少看一场大演出。</p>
+<p>如果下午有雷雨，上午优先开放的户外过山车；中午把 Mario Kart、Monsters、魔法部及室内演出穿插进去。不要把某个唯一必玩全部押在闭园前；夜间 Stardust 适合有余力再刷。</p>
+<p>午餐在 Berk 的 Mead Hall / Spit Fyre Grill 就近解决；晚餐按所在区域选择 Pizza Moon 或 Café L’air De La Sirène，菜单与点餐方式看 App。餐厅只作顺路候选。</p></article><article class="day card" id="day-4"><span class="eyebrow">DAY 04</span><h3>10/3 周六｜Hollywood Studios → Magic Kingdom，晚上烟花</h3><p><strong>上午至约 14:30–15:00：Hollywood Studios。</strong> 普通开园前约 60 分钟到停车场。优先 Rise of the Resistance → Tower of Terror → Rock ’n’ Roller Coaster；接着看排队补 Runaway Railway、Slinky Dog、Smugglers Run。</p>
+<p>若没有快通，先保前三项 + Runaway Railway，不保证六项全玩。午餐放在星战区或 Sunset Boulevard 附近，别为了桌餐跨园区折返。</p>
+<p><strong>约 14:30–16:00：换园。</strong> 自驾从 Hollywood Studios 取车，开到 Magic Kingdom 停车场（TTC），再搭单轨或渡轮到园门；从第一园出园到第二园真正进门，预留 <strong>75–105 分钟</strong>。这样晚上车就在 MK，不用散场后绕回 Hollywood Studios。</p>
+<p><strong>下午至夜间：Magic Kingdom。</strong> 优先 TRON → Space Mountain；再按所在位置与队伍选 Big Thunder / Tiana / Seven Dwarfs。烟花前约 45–60 分钟到城堡正面中央广场与 Main Street 方向选位，别贴在城堡脚下。游行、烟花场次以 App 为准。</p>
+<p>你晚间已选 MK，所以本次 <strong>Fantasmic! 不作为当天执行项</strong>；它仍列在项目目录中，避免漏项。若 9/30 已完成部分 MK 项目，10/3 补剩余项，不强求重复。</p></article><article class="day card" id="day-5"><span class="eyebrow">DAY 05</span><h3>10/4 周日｜Disney Springs / Downtown Orlando + 休息</h3><p>完全保留你的弹性休息日：睡到自然醒，约 11:00 后去 Disney Springs 吃饭、购物；下午回公寓休息。若想加 Downtown，放在下午或傍晚短逛，不要求两个区域都完成。</p>
+<p>Disney Springs 是购物餐饮区，不是第五个 Disney 主题乐园；普通自助停车免费。可逛 World of Disney、LEGO Store 和湖边步道。午晚餐按当时所在区域选，全天不设必须准点到达的餐厅。</p></article><article class="day card" id="day-6"><span class="eyebrow">DAY 06</span><h3>10/5 周一｜Islands of Adventure → Universal Studios Florida（Park-to-Park）</h3><p>导航到环球老园共用停车楼，经 CityWalk 去 Islands。车停一次，两园之间不必开车。</p>
+<ul>
+<li><strong>上午 Islands</strong>：Hagrid’s → VelociCoaster → Forbidden Journey；Hagrid 若很早已积压长队且你有适用 Express，可先用短队完成其他项目。</li>
+<li><strong>随后</strong>：Hulk + Spider-Man。这会涉及岛内走动；若五项排队过长，优先前三项，Hulk/Spider-Man 根据喜好二选一。不把三项湿身项目一起塞入半天。</li>
+<li><strong>约 13:30–14:00 启动换园</strong>：Hogsmeade 乘 Hogwarts Express 去 King’s Cross；如果火车长队会错过 Bourne 场次，直接从园门经 CityWalk 步行换园，火车留作有余力再体验。</li>
+<li><strong>下午 Universal Studios Florida</strong>：到园先锁定 Bourne Stuntacular 当天尚可赶上的场次，围绕它安排 Gringotts、Revenge of the Mummy，再补 E.T. / MEN IN BLACK / Transformers。</li>
+<li><strong>晚上</strong>：仅在官方当天排期有的情况下看 CineSational；不把夜秀当作已确认项目。剩余时间吃饭或离园。</li>
+</ul>
+<p>“约 14:00 换园”是保护另一园核心体验的时间线，不是保证上午五项都能完成。开园当天先查看两个园关门时间与 Bourne 最后一场，若 USF 提早关门，则当天更早换园；日期与两园先后仍照旧。</p>
+<p>Hogwarts Express 要覆盖两园的 <strong>Park-to-Park</strong> 权限，且两方向内容不同，单程就能完成一次体验；普通分日单园票不等价。HHN 是另票活动，日间票不自动包含，10/5 是否有特殊营业安排须以官方日历核对。<a href="https://blog.discoveruniversal.com/guides-and-tips/complete-guide-to-universal-studios-florida/" target="_blank" rel="noopener noreferrer">环球官方影城指南 ↗</a></p>
+<p>午餐可在 Hogsmeade 的 Three Broomsticks 或到 Diagon Alley 的 Leaky Cauldron 再吃；晚餐在 USF / CityWalk，按离园时间决定。</p></article><article class="day card" id="day-7"><span class="eyebrow">DAY 07</span><h3>10/6 周二｜Brunch + Lake Eola / Downtown → MCO</h3><p>推荐保留你原本的最后半日，但<strong>先退房再去市区</strong>，避免来回绕路：</p>
+<div class="table-wrap"><table><thead><tr><th>建议时间</th><th>安排</th></tr></thead><tbody>
+<tr><td>08:30–09:30</td><td>起床、早餐或退房后前往 brunch 区域；收好所有行李</td></tr>
+<tr><td>09:30–10:00</td><td>提前退房，带走行李；最迟 11:00 完成房源退房要求</td></tr>
+<tr><td>10:00–11:15</td><td>Lake Eola / Thornton Park 周边 brunch；如已吃早餐则轻松散步</td></tr>
+<tr><td>11:15–12:00</td><td>Lake Eola 湖边走走拍照，按体力走部分即可</td></tr>
+<tr><td>12:00–12:15</td><td>离开 Downtown，预留加油、交通与找还车入口时间</td></tr>
+<tr><td>13:00–13:30</td><td>到租车还车点；机场外门店需再提前约 30–45 分钟</td></tr>
+<tr><td>13:30–14:00</td><td>目标进入出发航站楼，办理托运与安检</td></tr>
+<tr><td>16:36</td><td>航班起飞</td></tr>
+</tbody></table></div>
+<p>这里的机场缓冲是本计划的建议，不代表航司最晚值机时间。航站楼及租车公司未知，按实际订单修正。若早上起晚、雷雨或路况差，缩短湖边散步，不压缩还车和机场缓冲。<a href="https://www.orlando.gov/Parks-the-Environment/Directory/Lake-Eola-Park" target="_blank" rel="noopener noreferrer">Lake Eola 市政府页面 ↗</a></p></article></section>
+<section id="parks" class="panel"><div class="section-intro"><div><span class="eyebrow">SEVEN PARKS / ONE FIELD GUIDE</span><h2>七园项目库</h2><p>★★★ 必玩　★★ 推荐　○ 可选　△ 有条件　× 不可安排</p></div></div><div class="filter-box js-only"><div class="filter-grid"><div class="field"><label for="query">搜索项目 · 中英文均可</label><input id="query" type="search" placeholder="试试 TRON、过山车、哈利波特…" autocomplete="off"></div><div class="field"><label for="park-select">选择园区</label><select id="park-select"><option value="all">全部 7 个园区</option><option value="0">Animal Kingdom</option><option value="1">EPCOT</option><option value="2">Epic Universe</option><option value="3">Hollywood Studios</option><option value="4">Magic Kingdom</option><option value="5">Islands of Adventure</option><option value="6">Universal Studios Florida</option></select></div><button id="must" class="toggle" aria-pressed="false">只看 ★★★ 必玩</button></div><div class="filter-status"><span id="result-count" role="status" aria-live="polite"></span><button id="clear">清除筛选</button></div><div class="filter-status"><span id="progress"></span><span>勾选“已玩”保存在此浏览器</span></div></div><div class="tip"><p>范围：你安排中的四个 Disney 园 + 三个 Universal 园。不扩展到 SeaWorld、水上乐园、LEGOLAND。常规设施逐项列出，固定街演、步道与角色体验补齐；动物物种、各国展馆内的小展项、同一互动系统的每个触发点合并列出，不将每件展品算一项。付费幕后游、餐饮购物不纳入常规设施总表；可选付费互动另列。巡游及季节夜秀只能视排期参加。</p></div><p class="js-only" style="font-size:12px;color:var(--muted)">手机可左右滑动项目表格。筛选只隐藏不匹配内容，不删除原攻略；打印会包含全部内容。</p><div id="empty" class="empty" hidden>没有找到匹配项目，换个关键词或清除筛选试试。</div><article class="park card" id="park-0" data-park="0"><div class="card-top"><div><span class="eyebrow">PARK 01 · 9/30</span><h3>Animal Kingdom</h3></div><a class="map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Disney%20Animal%20Kingdom%20parking">停车导航 ↗</a></div><div class="table-wrap"><table><thead><tr><th>优先</th><th>项目（英文便于 App 搜索）</th><th>体验 / 注意</th></tr></thead><tbody>
+<tr class="must-row"><td>★★★</td><td>Avatar Flight of Passage 阿凡达飞行</td><td>沉浸飞行模拟；本园第一优先，可能晕动</td></tr>
+<tr class="must-row"><td>★★★</td><td>Expedition Everest 珠峰探险</td><td>过山车，有倒退与黑暗段</td></tr>
+<tr class="must-row"><td>★★★</td><td>Kilimanjaro Safaris 乞力马扎罗猎游</td><td>看真实动物，早些安排</td></tr>
+<tr class="must-row"><td>★★★</td><td>Festival of the Lion King 狮子王庆典</td><td>必看舞台秀，坐下恢复体力</td></tr>
+<tr><td>★★</td><td>Na’vi River Journey 纳美河之旅</td><td>温和乘船；队长时让位给核心项目</td></tr>
+<tr><td>★★</td><td>Zootopia: Better Zoogether!</td><td>2026 当前目录中的动物城剧场</td></tr>
+<tr><td>★★</td><td>Finding Nemo: The Big Blue… and Beyond!</td><td>海底总动员音乐剧</td></tr>
+<tr><td>★★</td><td>Gorilla Falls Exploration Trail</td><td>大猩猩瀑布步道</td></tr>
+<tr><td>★★</td><td>Maharajah Jungle Trek</td><td>亚洲动物步道</td></tr>
+<tr><td>★★</td><td>Kali River Rapids</td><td>漂流，会湿身；回公寓前玩更方便</td></tr>
+<tr><td>○</td><td>Feathered Friends in Flight!</td><td>飞鸟演出</td></tr>
+<tr><td>○</td><td>Wildlife Express Train</td><td>往返保育区的火车；连同游览需留较多时间</td></tr>
+<tr><td>○</td><td>Animal Care at Conservation Station</td><td>动物保育观察</td></tr>
+<tr><td>○</td><td>Bluey’s Wild World at Conservation Station</td><td>布鲁伊互动，偏家庭客群</td></tr>
+<tr><td>○</td><td>Jumping Junction</td><td>新增动物体验区，按现场开放</td></tr>
+<tr><td>○</td><td>The Oasis Exhibits</td><td>入口动物展示区</td></tr>
+<tr><td>○</td><td>Discovery Island Trails</td><td>生命之树周边步道</td></tr>
+<tr><td>○</td><td>Tree of Life</td><td>地标与雕刻观察</td></tr>
+<tr><td>△</td><td>Tree of Life Awakenings</td><td>夜间投影；只在有排期且留园时可看</td></tr>
+<tr><td>○</td><td>Wilderness Explorers</td><td>探索徽章任务</td></tr>
+<tr><td>○</td><td>Disney Fab 50 Character Collection</td><td>雕像寻找 / 互动</td></tr>
+</tbody></table></div>
+<p><strong>固定街演</strong>：Winged Encounters 鸟群展示、Tam Tam Drummers、Harambe Village Street Band–Burudika、Viva Gaia Street Band。<strong>角色点</strong>：Adventurers Outpost 的 Mickey 等、Character Landing 的 Moana、Discovery Island 的 Kevin、Zoogether Day Gathering Spot。具体出场看 App。</p>
+<p><strong>动物展示合并索引</strong>：非洲/亚洲鸟类、象、狮、非洲猪类、Ankole 牛、食蚁兽、水獭、鹿豚、蝙蝠、蝴蝶、棉顶狨、火烈鸟、长臂猿、长颈鹿、大猩猩、河马、无脊椎动物、袋鼠、科莫多巨蜥、狐猴、狐獴、候鸟、霍加狓、犀牛、老虎、秃鹫、斑马；在上述步道/Safari 等区域观看，不单独安排往返。</p>
+<p>来源：<a href="https://disneyworld.disney.go.com/attractions/animal-kingdom/" target="_blank" rel="noopener noreferrer">官方项目目录 ↗</a>、<a href="https://disneyworld.disney.go.com/attractions/animal-kingdom/avatar-flight-of-passage/" target="_blank" rel="noopener noreferrer">Avatar 官方介绍 ↗</a>。</p></article><article class="park card" id="park-1" data-park="1"><div class="card-top"><div><span class="eyebrow">PARK 02 · 10/1</span><h3>EPCOT</h3></div><a class="map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=EPCOT%20parking">停车导航 ↗</a></div><div class="table-wrap"><table><thead><tr><th>优先</th><th>项目</th><th>体验 / 注意</th></tr></thead><tbody>
+<tr class="must-row"><td>★★★</td><td>Guardians of the Galaxy: Cosmic Rewind 银河护卫队</td><td>旋转、倒退发射室内过山车；你的第一优先</td></tr>
+<tr class="must-row"><td>★★★</td><td>Test Track 测试赛道</td><td>高速试车体验</td></tr>
+<tr class="must-row"><td>★★★</td><td>Soarin’ Across America 飞越美国</td><td>当前新版本；不要把旧的 Around the World 算成另一项可同时玩的设施</td></tr>
+<tr class="must-row"><td>★★★</td><td>Remy’s Ratatouille Adventure 料理鼠王</td><td>沉浸式无轨乘骑</td></tr>
+<tr><td>★★</td><td>Frozen Ever After 冰雪奇缘</td><td>乘船，有小落差和倒退段</td></tr>
+<tr><td>★★</td><td>Spaceship Earth 太空船地球</td><td>大球内经典乘骑</td></tr>
+<tr><td>★★</td><td>Living with the Land</td><td>温室农场乘船，适合午间</td></tr>
+<tr><td>★★</td><td>Journey of Water, Inspired by Moana</td><td>户外水互动步道</td></tr>
+<tr><td>★★</td><td>Luminous The Symphony of Us</td><td>当晚优先夜秀；按实际场次</td></tr>
+<tr><td>○</td><td>Mission: SPACE</td><td>绿线较温和；橙线离心感强，晕动风险较高</td></tr>
+<tr><td>○</td><td>Gran Fiesta Tour</td><td>墨西哥馆三骑士乘船</td></tr>
+<tr><td>○</td><td>The Seas with Nemo &amp; Friends</td><td>海底总动员乘骑</td></tr>
+<tr><td>○</td><td>Turtle Talk with Crush</td><td>海龟互动剧场</td></tr>
+<tr><td>○</td><td>Journey Into Imagination with Figment</td><td>想象力乘骑</td></tr>
+<tr><td>○</td><td>Disney &amp; Pixar Short Film Festival</td><td>短片影院</td></tr>
+<tr><td>○</td><td>The American Adventure</td><td>美国馆剧场</td></tr>
+<tr><td>○</td><td>Awesome Planet</td><td>地球主题影片</td></tr>
+<tr><td>○</td><td>Beauty and the Beast Sing-Along</td><td>法国馆合唱影片</td></tr>
+<tr><td>○</td><td>Impressions de France</td><td>法国风光影片；和合唱片共用场地，分时放映</td></tr>
+<tr><td>○</td><td>Canada Far and Wide</td><td>加拿大 360° 影片</td></tr>
+<tr><td>○</td><td>Reflections of China</td><td>中国 360° 影片</td></tr>
+<tr><td>○</td><td>SeaBase Aquarium / Bruce’s Shark World</td><td>水族馆与鲨鱼主题互动；海牛、珊瑚礁鱼、海龟、鲨鱼与鳐鱼合并于此</td></tr>
+<tr><td>○</td><td>Advanced Training Lab</td><td>太空互动区</td></tr>
+<tr><td>○</td><td>ImageWorks – The “What If” Labs</td><td>想象力互动区</td></tr>
+<tr><td>○</td><td>Project Tomorrow</td><td>太空船地球出口互动区</td></tr>
+<tr><td>○</td><td>DuckTales World Showcase Adventure</td><td>手机互动寻宝</td></tr>
+<tr><td>○</td><td>Kidcot Fun Stops</td><td>各国儿童活动点</td></tr>
+<tr><td>○</td><td>Dreamers Point / Leave A Legacy / Fab 50</td><td>雕像、纪念墙与互动散步</td></tr>
+</tbody></table></div>
+<p><strong>世界橱窗 11 馆</strong>：墨西哥、挪威、中国、德国、意大利、美国、日本、摩洛哥、法国、英国、加拿大。展厅：American Heritage Gallery、Bijutsu-kan Gallery、Gallery of Arts and History、House of the Whispering Willows、Mexico Folk Art Gallery、Stave Church Gallery。</p>
+<p><strong>常规/当期娱乐目录</strong>：Voices of Liberty、Matsuriza 太鼓、JAMMitors、Acrobatico!、Sergio、Music of Mexico、Command Performance、Max &amp; Aydar、Rose &amp; Crown Pub Musician、Canada Mill Stage、Germany Gazebo、CommuniCore Plaza Stage；Food &amp; Wine 的 Eat to the Beat 演唱会按当日排期。</p>
+<p><strong>角色体验</strong>：英国 Alice/小熊维尼朋友；挪威 Anna/Elsa；法国 Belle/Aurora；摩洛哥 Jasmine；德国 Snow White；中国 Mulan；墨西哥三骑士角色；入口 Pluto；Mickey &amp; Friends；ImageWorks 的 Figment；Star-Lord；Asha。Disney Visa 持卡人拍照点另有资格条件。</p>
+<p>来源：<a href="https://disneyworld.disney.go.com/attractions/epcot/" target="_blank" rel="noopener noreferrer">官方目录 ↗</a>、<a href="https://disneyworld.disney.go.com/attractions/epcot/guardians-of-the-galaxy-cosmic-rewind/" target="_blank" rel="noopener noreferrer">Guardians ↗</a>、<a href="https://disneyworld.disney.go.com/en_CA/attractions/epcot/soarin-across-america/" target="_blank" rel="noopener noreferrer">Soarin’ 当前版本 ↗</a>。</p></article><article class="park card" id="park-2" data-park="2"><div class="card-top"><div><span class="eyebrow">PARK 03 · 10/2</span><h3>Epic Universe</h3></div><a class="map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Universal%20Epic%20Universe%20parking">停车导航 ↗</a></div><p><strong>全部 11 项乘骑设施</strong>如下；演出、互动另列。</p>
+<div class="table-wrap"><table><thead><tr><th>分区</th><th>优先</th><th>项目</th><th>体验</th></tr></thead><tbody>
+<tr class="must-row"><td>Celestial Park</td><td>★★★</td><td>Stardust Racers</td><td>双轨发射过山车，高刺激</td></tr>
+<tr><td>Celestial Park</td><td>★★</td><td>Constellation Carousel</td><td>星空旋转木马，夜景更出片</td></tr>
+<tr class="must-row"><td>Ministry of Magic</td><td>★★★</td><td>Harry Potter and the Battle at the Ministry</td><td>魔法部沉浸冒险，首访重点</td></tr>
+<tr class="must-row"><td>Dark Universe</td><td>★★★</td><td>Monsters Unchained: The Frankenstein Experiment</td><td>怪物主题黑暗乘骑，惊吓和动态感强</td></tr>
+<tr><td>Dark Universe</td><td>★★</td><td>Curse of the Werewolf</td><td>旋转过山车</td></tr>
+<tr class="must-row"><td>Super Nintendo World</td><td>★★★</td><td>Mine-Cart Madness</td><td>大金刚矿车，视觉断轨效果</td></tr>
+<tr><td>Super Nintendo World</td><td>★★</td><td>Mario Kart: Bowser’s Challenge</td><td>AR 互动赛车；并非高速过山车</td></tr>
+<tr><td>Super Nintendo World</td><td>○</td><td>Yoshi’s Adventure</td><td>温和高架游览</td></tr>
+<tr class="must-row"><td>Isle of Berk</td><td>★★★</td><td>Hiccup’s Wing Gliders</td><td>驯龙主题发射过山车</td></tr>
+<tr><td>Isle of Berk</td><td>★★</td><td>Dragon Racer’s Rally</td><td>高空摆动/翻转体验</td></tr>
+<tr><td>Isle of Berk</td><td>○</td><td>Fyre Drill</td><td>水炮船，明显湿身</td></tr>
+</tbody></table></div>
+<p><strong>演出、互动与角色</strong>：</p>
+<ul>
+<li>★★★ The Untrainable Dragon：驯龙舞台秀，强烈推荐。</li>
+<li>★★ Le Cirque Arcanus：魔法生物马戏剧场。</li>
+<li>○ Astronomica：互动喷泉；Viking Training Camp：儿童探索区。</li>
+<li>△ Nintendo Power-Up Band 互动：金币、Key Challenges 与 Bowser Jr. Shadow Showdown；手环另购，Boss 挑战有钥匙条件，不默认含于普通门票。</li>
+<li>○ Mario、Luigi、Peach、Toad、Donkey Kong 等角色按当天安排；Berk 的 Hiccup / Toothless 等、Darkmoor 的怪物角色，出场可能变化。</li>
+<li>△ 魔法部街区魔杖互动、神奇动物互动：部分需兼容互动魔杖另购。</li>
+<li>△ Darkmoor Monster Makeup Experience：另付费化妆，不占必玩时间。</li>
+<li>△ Celestial Park 喷泉灯光与夜间告别节目：有排期才安排，不保证每晚都有完整夜秀。</li>
+</ul>
+<p>来源：<a href="https://blog.discoveruniversal.com/guides-and-tips/complete-guide-to-universal-epic-universe/" target="_blank" rel="noopener noreferrer">Epic 官方完整指南 ↗</a>、<a href="https://blog.discoveruniversal.com/guides-and-tips/guide-to-dark-universe-in-universal-epic-universe/" target="_blank" rel="noopener noreferrer">Dark Universe 官方指南 ↗</a>、<a href="https://www.universalorlando.com/contentdata/uor/en/us/files/Documents/epic-universe-guide-for-safety-and-accessibility.pdf" target="_blank" rel="noopener noreferrer">官方乘骑指南 ↗</a>。</p></article><article class="park card" id="park-3" data-park="3"><div class="card-top"><div><span class="eyebrow">PARK 04 · 10/3 上午至下午</span><h3>Hollywood Studios</h3></div><a class="map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Disney%20Hollywood%20Studios%20parking">停车导航 ↗</a></div><div class="table-wrap"><table><thead><tr><th>优先</th><th>项目</th><th>体验 / 本次取舍</th></tr></thead><tbody>
+<tr class="must-row"><td>★★★</td><td>Star Wars: Rise of the Resistance</td><td>本园沉浸体验第一优先</td></tr>
+<tr class="must-row"><td>★★★</td><td>The Twilight Zone Tower of Terror</td><td>跳楼机，强烈推荐</td></tr>
+<tr class="must-row"><td>★★★</td><td>Rock ’n’ Roller Coaster Starring The Muppets</td><td>当前布偶主题室内发射翻转过山车</td></tr>
+<tr><td>★★</td><td>Mickey &amp; Minnie’s Runaway Railway</td><td>无轨乘骑；前三完成后优先</td></tr>
+<tr><td>★★</td><td>Slinky Dog Dash</td><td>家庭发射过山车；排队过长可让位</td></tr>
+<tr><td>★★</td><td>Millennium Falcon: Smugglers Run</td><td>驾驶千年隼；互动模拟</td></tr>
+<tr><td>★★</td><td>Toy Story Mania!</td><td>互动射击</td></tr>
+<tr><td>○</td><td>Star Tours – The Adventures Continue</td><td>星战模拟飞行</td></tr>
+<tr><td>○</td><td>Alien Swirling Saucers</td><td>旋转甩动，偏家庭</td></tr>
+<tr><td>★★</td><td>Indiana Jones Epic Stunt Spectacular!</td><td>特技表演，按场次插入</td></tr>
+<tr><td>★★</td><td>Disney Villains: Unfairly Ever After</td><td>反派舞台秀</td></tr>
+<tr><td>★★</td><td>The Little Mermaid – A Musical Adventure</td><td>小美人鱼音乐剧</td></tr>
+<tr><td>○</td><td>Beauty and the Beast – Live on Stage</td><td>美女与野兽舞台秀</td></tr>
+<tr><td>○</td><td>For the First Time in Forever: A Frozen Sing-Along Celebration</td><td>冰雪合唱</td></tr>
+<tr><td>○</td><td>Disney Jr. Mickey Mouse Clubhouse Live!</td><td>低龄向演出</td></tr>
+<tr><td>○</td><td>Walt Disney Presents</td><td>展览与影片</td></tr>
+<tr><td>○</td><td>Vacation Fun</td><td>米奇短片</td></tr>
+<tr><td>○</td><td>The Magic of Disney Animation</td><td>动画体验场地；包含下列子项，不重复算独立大设施</td></tr>
+<tr><td>○</td><td>Olaf Draws! / Once Upon a Studio Theater / Off the Page!</td><td>绘画、影院、角色体验</td></tr>
+<tr><td>○</td><td>Drawn to Wonderland</td><td>动画场地内儿童活动区</td></tr>
+<tr class="must-row"><td>★★★ / 本次不排</td><td>Fantasmic!</td><td>很值得看的夜秀，但与你当天 MK 烟花冲突</td></tr>
+<tr><td>△ / 本次不排</td><td>Disney Movie Magic / Wonderful World of Animation</td><td>夜间投影，离园换 MK 后无法同时看</td></tr>
+</tbody></table></div>
+<p><strong>街演与角色</strong>：Green Army Drum Corps、First Order Searches for the Resistance、Darth Vader、Walt Disney Presents 的 Ariel、Red Carpet Dreams 的 Mickey/Minnie、Edna Mode、Joy / Pixar Pals、Olaf、Toy Story Land 的玩具角色；另有 Fab 50 雕像与 Disney Visa 持卡拍照点。场次及位置看 App。</p>
+<p><strong>额外付费体验</strong>：Savi’s Workshop 光剑制作、Droid Depot 机器人制作；仅粉丝有意愿且有预约时考虑，会明显挤占半天刷项目时间。</p>
+<p>来源：<a href="https://disneyworld.disney.go.com/attractions/hollywood-studios/" target="_blank" rel="noopener noreferrer">官方目录 ↗</a>、<a href="https://disneyworld.disney.go.com/attractions/hollywood-studios/star-wars-rise-of-the-resistance/" target="_blank" rel="noopener noreferrer">Rise 官方页 ↗</a>、<a href="https://disneyworld.disney.go.com/en_CA/attractions/hollywood-studios/rock-and-roller-coaster-starring-muppets/" target="_blank" rel="noopener noreferrer">新版 Rock ’n’ Roller Coaster ↗</a>。</p></article><article class="park card" id="park-4" data-park="4"><div class="card-top"><div><span class="eyebrow">PARK 05 · 9/30 可选晚上 + 10/3 下午晚上</span><h3>Magic Kingdom</h3></div><a class="map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Magic%20Kingdom%20parking%20Transportation%20and%20Ticket%20Center">停车导航 ↗</a></div><div class="table-wrap"><table><thead><tr><th>分区</th><th>优先</th><th>项目</th><th>体验</th></tr></thead><tbody>
+<tr class="must-row"><td>Tomorrowland</td><td>★★★</td><td>TRON Lightcycle / Run</td><td>发射过山车，本园成人刺激首选</td></tr>
+<tr class="must-row"><td>Tomorrowland</td><td>★★★</td><td>Space Mountain</td><td>黑暗过山车</td></tr>
+<tr class="must-row"><td>Frontierland</td><td>★★★</td><td>Big Thunder Mountain Railroad</td><td>户外矿山过山车</td></tr>
+<tr><td>Frontierland</td><td>★★</td><td>Tiana’s Bayou Adventure</td><td>大落差水上乘骑，会湿身</td></tr>
+<tr><td>Fantasyland</td><td>★★</td><td>Seven Dwarfs Mine Train</td><td>七个小矮人矿车；经典但强度温和</td></tr>
+<tr><td>Liberty Square</td><td>★★</td><td>Haunted Mansion</td><td>幽灵公馆经典黑暗乘骑</td></tr>
+<tr><td>Adventureland</td><td>★★</td><td>Pirates of the Caribbean</td><td>加勒比海盗乘船</td></tr>
+<tr><td>Adventureland</td><td>★★</td><td>Jungle Cruise</td><td>丛林巡航，英语讲解笑话</td></tr>
+<tr><td>Tomorrowland</td><td>★★</td><td>Buzz Lightyear’s Space Ranger Spin</td><td>巴斯光年射击</td></tr>
+<tr><td>Fantasyland</td><td>★★</td><td>Peter Pan’s Flight</td><td>彼得潘，队长时不优先于过山车</td></tr>
+<tr><td>Fantasyland</td><td>★★</td><td>Mickey’s PhilharMagic</td><td>音乐 3D 剧场</td></tr>
+<tr><td>Tomorrowland</td><td>○</td><td>PeopleMover</td><td>高架游览与休息</td></tr>
+<tr><td>Tomorrowland</td><td>○</td><td>Astro Orbiter</td><td>高处旋转飞船</td></tr>
+<tr><td>Tomorrowland</td><td>○</td><td>Tomorrowland Speedway</td><td>赛车轨道驾驶</td></tr>
+<tr><td>Tomorrowland</td><td>○</td><td>Monsters, Inc. Laugh Floor</td><td>英语互动喜剧</td></tr>
+<tr><td>Fantasyland</td><td>○</td><td>“it’s a small world”</td><td>小小世界乘船</td></tr>
+<tr><td>Fantasyland</td><td>○</td><td>The Many Adventures of Winnie the Pooh</td><td>维尼黑暗乘骑</td></tr>
+<tr><td>Fantasyland</td><td>○</td><td>Under the Sea – Journey of The Little Mermaid</td><td>小美人鱼乘骑</td></tr>
+<tr><td>Fantasyland</td><td>○</td><td>Dumbo the Flying Elephant</td><td>小飞象</td></tr>
+<tr><td>Fantasyland</td><td>○</td><td>The Barnstormer</td><td>小型过山车</td></tr>
+<tr><td>Fantasyland</td><td>○</td><td>Mad Tea Party</td><td>旋转茶杯</td></tr>
+<tr><td>Fantasyland</td><td>○</td><td>Prince Charming Regal Carrousel</td><td>旋转木马</td></tr>
+<tr><td>Fantasyland</td><td>○</td><td>Enchanted Tales with Belle</td><td>贝儿互动故事</td></tr>
+<tr><td>Adventureland</td><td>○</td><td>The Magic Carpets of Aladdin</td><td>阿拉丁飞毯</td></tr>
+<tr><td>Adventureland</td><td>○</td><td>Walt Disney’s Enchanted Tiki Room</td><td>提基鸟音乐秀</td></tr>
+<tr><td>Adventureland</td><td>○</td><td>Swiss Family Treehouse</td><td>树屋步行</td></tr>
+<tr><td>Adventureland</td><td>○</td><td>A Pirate’s Adventure – Treasures of the Seven Seas</td><td>海盗寻宝</td></tr>
+<tr><td>Frontierland</td><td>○</td><td>Country Bear Musical Jamboree</td><td>熊乡音乐剧场</td></tr>
+<tr><td>Liberty Square</td><td>○</td><td>The Hall of Presidents</td><td>总统剧场</td></tr>
+<tr><td>Main Street / Fantasyland</td><td>○</td><td>Walt Disney World Railroad</td><td>园区火车；当前线路与站点按现场，不默认完整环线或 Frontierland 站可用</td></tr>
+<tr><td>Main Street</td><td>○</td><td>Main Street Vehicles</td><td>复古车辆，运营时段有限，晚到容易错过</td></tr>
+<tr><td>Fantasyland</td><td>○</td><td>Casey Jr. Splash ’N’ Soak Station</td><td>戏水区</td></tr>
+<tr><td>Fantasyland</td><td>○</td><td>Smellephants on Parade</td><td>气味寻宝</td></tr>
+</tbody></table></div>
+<p><strong>演出、地标与角色</strong>：</p>
+<ul>
+<li>★★★ Happily Ever After：你的 10/3 夜间主目标。</li>
+<li>★★ Disney Starlight: Dream the Night Away：夜间巡游，有场次才加。</li>
+<li>★★ Disney Festival of Fantasy Parade：日间巡游；你的到达时段可能已经错过，不为它改日程。</li>
+<li>○ Mickey’s Magical Friendship Faire、Disney Adventure Friends Cavalcade、The Dapper Dans、Casey’s Corner Pianist。</li>
+<li>○ Cinderella Castle、Fab 50 雕像；Main Street 马匹属于车辆/氛围体验，不单列骑乘活动。</li>
+<li>○ Town Square 的 Mickey；Ariel’s Grotto；Adventureland 的 Aladdin 角色；Fairytale Hall 的 Cinderella / Tiana 与访客公主；Pete’s Silly Sideshow 两组角色；Fairytale Garden 的 Mirabel；Peter Pan；Pooh / Tigger。</li>
+</ul>
+<p><strong>成人半天实际优先顺序</strong>：TRON → Space Mountain → Big Thunder → 烟花；时间充足再补 Tiana / 七矮人 / Haunted Mansion。目录中的三颗星不代表这半天一定刷得完。</p>
+<p>来源：<a href="https://disneyworld.disney.go.com/attractions/magic-kingdom/" target="_blank" rel="noopener noreferrer">官方项目目录 ↗</a>、<a href="https://disneyworld.disney.go.com/attractions/magic-kingdom/tron-lightcycle-run/" target="_blank" rel="noopener noreferrer">TRON 官方页 ↗</a>、<a href="https://disneyworld.disney.go.com/events-tours/magic-kingdom/mickeys-not-so-scary-halloween-party/" target="_blank" rel="noopener noreferrer">官方派对及设施清单 ↗</a>。</p></article><article class="park card" id="park-5" data-park="5"><div class="card-top"><div><span class="eyebrow">PARK 06 · 10/5 上午至约 14:00</span><h3>Islands of Adventure</h3></div><a class="map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Universal%20Orlando%20parking%20garage">停车导航 ↗</a></div><div class="table-wrap"><table><thead><tr><th>分区</th><th>优先</th><th>项目</th><th>体验</th></tr></thead><tbody>
+<tr class="must-row"><td>Hogsmeade</td><td>★★★</td><td>Hagrid’s Magical Creatures Motorbike Adventure</td><td>多次发射、倒退、落轨；必保</td></tr>
+<tr class="must-row"><td>Jurassic Park</td><td>★★★</td><td>Jurassic World VelociCoaster</td><td>强刺激发射与翻转；你的全程重点</td></tr>
+<tr class="must-row"><td>Hogsmeade</td><td>★★★</td><td>Harry Potter and the Forbidden Journey</td><td>霍格沃茨沉浸乘骑，易晕</td></tr>
+<tr class="must-row"><td>Marvel</td><td>★★★</td><td>The Incredible Hulk Coaster</td><td>高强度翻转过山车</td></tr>
+<tr class="must-row"><td>Marvel</td><td>★★★</td><td>The Amazing Adventures of Spider-Man</td><td>经典沉浸 3D 动感乘骑</td></tr>
+<tr><td>Jurassic Park</td><td>★★</td><td>Jurassic Park River Adventure</td><td>水上乘骑，大落差</td></tr>
+<tr><td>Toon Lagoon</td><td>★★</td><td>Dudley Do-Right’s Ripsaw Falls</td><td>激流勇进，明显湿身</td></tr>
+<tr><td>Toon Lagoon</td><td>★★</td><td>Popeye &amp; Bluto’s Bilge-Rat Barges</td><td>漂流，很容易全身湿透</td></tr>
+<tr><td>Skull Island</td><td>★★</td><td>Skull Island: Reign of Kong</td><td>金刚动感车辆体验</td></tr>
+<tr><td>Marvel</td><td>★★</td><td>Doctor Doom’s Fearfall</td><td>发射塔；短队可加</td></tr>
+<tr><td>Hogsmeade</td><td>★★</td><td>Hogwarts Express – Hogsmeade Station</td><td>去 USF 的跨园火车，须适用 Park-to-Park</td></tr>
+<tr><td>Hogsmeade</td><td>○</td><td>Flight of the Hippogriff</td><td>鹰马小型过山车</td></tr>
+<tr><td>Marvel</td><td>○</td><td>Storm Force Accelatron</td><td>高速旋转</td></tr>
+<tr><td>Seuss Landing</td><td>○</td><td>The Cat in the Hat</td><td>温和黑暗乘骑</td></tr>
+<tr><td>Seuss Landing</td><td>○</td><td>The High in the Sky Seuss Trolley Train Ride!</td><td>高架游览</td></tr>
+<tr><td>Seuss Landing</td><td>○</td><td>Caro-Seuss-el</td><td>旋转木马</td></tr>
+<tr><td>Seuss Landing</td><td>○</td><td>One Fish, Two Fish, Red Fish, Blue Fish</td><td>旋转飞行，可能被喷水</td></tr>
+<tr><td>Jurassic Park</td><td>△</td><td>Pteranodon Flyers</td><td>有儿童同行/身高规则，全成人不要默认能乘坐；以入口资格判断</td></tr>
+</tbody></table></div>
+<p><strong>步行、互动、演出与角色</strong>：Camp Jurassic、Jurassic Park Discovery Center、Raptor Encounter、Me Ship The Olive、If I Ran the Zoo、The Mystic Fountain；Ollivanders 魔杖选择演出、魔杖施法点（需兼容魔杖）；Frog Choir、Triwizard Spirit Rally；Oh! The Stories You’ll Hear!、Dr. Seuss Character Zone；Marvel 英雄角色与 Toon Lagoon 卡通角色。Hogwarts 城堡投影仅按当期官方场次，不假定 10/5 必有。</p>
+<p>你上午真正的保底是 <strong>Hagrid + VelociCoaster + Forbidden Journey</strong>；再加 Hulk / Spider-Man。水上项目和低龄设施虽列全，但在当天两园的约束下优先让位。</p>
+<p>来源：<a href="https://blog.discoveruniversal.com/guides-and-tips/complete-guide-to-universal-islands-of-adventure/" target="_blank" rel="noopener noreferrer">Islands 官方指南 ↗</a>、<a href="https://blog.discoveruniversal.com/guides-and-tips/universal-orlandos-ultimate-guide-to-jurassic-park/" target="_blank" rel="noopener noreferrer">Jurassic Park 官方指南 ↗</a>、<a href="https://www.universalorlando.com/web/en/us/plan-your-visit/resort-maps" target="_blank" rel="noopener noreferrer">官方地图入口 ↗</a>。</p></article><article class="park card" id="park-6" data-park="6"><div class="card-top"><div><span class="eyebrow">PARK 07 · 10/5 下午晚上</span><h3>Universal Studios Florida</h3></div><a class="map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Universal%20Orlando%20parking%20garage">停车导航 ↗</a></div><div class="table-wrap"><table><thead><tr><th>优先</th><th>项目</th><th>体验 / 注意</th></tr></thead><tbody>
+<tr class="must-row"><td>★★★</td><td>Harry Potter and the Escape from Gringotts</td><td>古灵阁过山车 + 场景体验</td></tr>
+<tr class="must-row"><td>★★★</td><td>Revenge of the Mummy</td><td>木乃伊室内过山车</td></tr>
+<tr class="must-row"><td>★★★</td><td>The Bourne Stuntacular</td><td>谍影重重特技秀；先查看场次</td></tr>
+<tr><td>★★</td><td>E.T. Adventure</td><td>经典悬挂式黑暗乘骑，强度低</td></tr>
+<tr><td>★★</td><td>MEN IN BLACK Alien Attack</td><td>黑衣人射击，有旋转</td></tr>
+<tr><td>★★</td><td>TRANSFORMERS: The Ride–3D</td><td>变形金刚动感乘骑</td></tr>
+<tr><td>★★</td><td>Hogwarts Express – King’s Cross Station</td><td>去 Islands 的火车；当天已坐另一方向可视时间决定是否回程</td></tr>
+<tr><td>○</td><td>The Simpsons Ride</td><td>辛普森模拟飞行，较易晕</td></tr>
+<tr><td>○</td><td>Despicable Me Minion Mayhem</td><td>小黄人模拟器</td></tr>
+<tr><td>○</td><td>Illumination’s Villain-Con Minion Blast</td><td>站立式互动射击</td></tr>
+<tr><td>○</td><td>Race Through New York Starring Jimmy Fallon</td><td>纽约主题模拟器</td></tr>
+<tr><td>○</td><td>Kang &amp; Kodos’ Twirl ’n’ Hurl</td><td>旋转飞碟</td></tr>
+<tr><td>○</td><td>Trolls Trollercoaster</td><td>梦工厂小型过山车</td></tr>
+<tr><td>○</td><td>Animal Actors on Location!</td><td>动物演员秀</td></tr>
+<tr><td>○</td><td>DreamWorks Imagination Celebration</td><td>梦工厂音乐秀</td></tr>
+<tr><td>○</td><td>Po Live!</td><td>阿宝互动体验</td></tr>
+<tr><td>△</td><td>Universal Mega Movie Parade</td><td>电影巡游；按当日场次</td></tr>
+<tr><td>△</td><td>CineSational: A Symphonic Spectacular</td><td>水幕/喷泉夜秀；季节性排期，不保证本次有</td></tr>
+<tr><td>×</td><td>Universal Orlando’s Horror Make-Up Show</td><td>官方当前列为 2026/5/12 至冬季整修，本次不排</td></tr>
+</tbody></table></div>
+<p><strong>街演与魔法体验</strong>：The Blues Brothers、¡Vamos! – Báilalo、Beat Builders、Marilyn and the Diamond Bellas、Celestina Warbeck and the Banshees、The Tales of Beedle the Bard；Ollivanders 魔杖选择、Diagon Alley / Knockturn Alley 施法点、Knight Bus 互动；魔杖另购。</p>
+<p><strong>梦工厂步行/儿童互动</strong>：Shrek’s Swamp for Little Ogres、King Harold’s Swamp Symphony、Mama Luna’s Feline Fiesta、Poppy’s Playground、Po’s Kung Fu Training Camp。</p>
+<p><strong>角色点</strong>：Illumination Theater 的小黄人 / Sing 角色、变形金刚机器人、DreamWorks Character Zone、Shrek’s Swamp Meet；Hollywood 周边海绵宝宝朋友、Scooby-Doo 团队、Marilyn、Betty Boop、Doc Brown 等按现场出场。</p>
+<p>来源：<a href="https://blog.discoveruniversal.com/guides-and-tips/complete-guide-to-universal-studios-florida/" target="_blank" rel="noopener noreferrer">USF 官方指南 ↗</a>、<a href="https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/park-hours" target="_blank" rel="noopener noreferrer">官方运营与整修信息 ↗</a>、<a href="https://www.universalorlando.com/web/en/us/plan-your-visit/resort-maps" target="_blank" rel="noopener noreferrer">官方地图 ↗</a>。</p></article></section>
+<section id="practical" class="panel"><div class="section-intro"><div><span class="eyebrow">BEFORE YOU GO</span><h2>出行备忘</h2><p>关闭项目、快通适用范围与自驾提醒。</p></div></div><div class="card prose"><h2>旧攻略里常见、这次不要去找的项目</h2>
+<div class="table-wrap"><table><thead><tr><th>园区</th><th>项目 / 状态</th></tr></thead><tbody>
+<tr><td>Animal Kingdom</td><td>DINOSAUR 与 DinoLand 已关闭；TriceraTop Spin、The Boneyard 等旧区项目不排；Tropical Americas 新区不当作本次已开</td></tr>
+<tr><td>Animal Kingdom</td><td>It’s Tough to Be a Bug! 已由 Zootopia 剧场取代；旧 Animation Experience 不按仍在原处运营处理</td></tr>
+<tr><td>EPCOT</td><td>Soarin’ Around the World 是旧影片版本，不和 Across America 重复排；Glimmering Greenhouses、Heartbeat of Freedom 属其他季节/节日</td></tr>
+<tr><td>Hollywood Studios</td><td>Aerosmith 版 Rock ’n’ Roller Coaster 是旧主题；Muppet*Vision 3D、Lightning McQueen’s Racing Academy 等旧项目不排；圣诞 Jollywood 节目不适用</td></tr>
+<tr><td>Magic Kingdom</td><td>Splash Mountain 已换为 Tiana；Tom Sawyer Island、Liberty Square Riverboat 不排；Carousel of Progress 自 2026/7/6 起关闭更新，本次不排；Railroad 路线以当前现场为准</td></tr>
+<tr><td>Magic Kingdom</td><td>Boo-To-You、Not-So-Spooky Spectacular、Hocus Pocus、Cadaver Dans 属另票派对；你安排的两个 MK 日期非派对夜，不能把这些写成当晚普通票内容；圣诞/国庆专属节目不适用</td></tr>
+<tr><td>Islands</td><td>Poseidon’s Fury、The Eighth Voyage of Sindbad、Dragon Challenge 均为旧设施，不排</td></tr>
+<tr><td>Universal Studios Florida</td><td>Hollywood Rip Ride Rockit 已关闭；Fast &amp; Furious–Supercharged 已于 2026 夏季永久关闭；Hollywood Drift 不是本次已开项目</td></tr>
+<tr><td>Universal Studios Florida</td><td>Horror Make-Up Show 正在整修；Shrek 4-D、Terminator 2: 3-D、旧 Woody Woodpecker / Fievel / Curious George 项目不排</td></tr>
+</tbody></table></div>
+<p>主要更新依据：<a href="https://disneyparksblog.com/wdw/dinoland-closing-animal-kingdom/" target="_blank" rel="noopener noreferrer">Disney DinoLand 公告 ↗</a>、<a href="https://blog.discoveruniversal.com/behind-the-scenes/fast-furious-dennis-mccarthy/" target="_blank" rel="noopener noreferrer">Universal 官方 Fast &amp; Furious 更新 ↗</a>、<a href="https://www.youtube.com/watch?v=Js_Jv5EzOv0" target="_blank" rel="noopener noreferrer">Universal 官方 Rip Ride Rockit 视频关闭说明 ↗</a>、<a href="https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/park-hours" target="_blank" rel="noopener noreferrer">Universal 整修目录 ↗</a>。</p>
+<p>新增/整修补充：<a href="https://disneyexperiences.com/disneyworld-press/release/new-details-revealed-for-the-magic-of-disney-animation-at-disneys-hollywood-studios/" target="_blank" rel="noopener noreferrer">Disney Animation 官方公告 ↗</a>、<a href="https://disneyworld.disney.go.com/fr-ca/attractions/magic-kingdom/walt-disney-carousel-of-progress/" target="_blank" rel="noopener noreferrer">Carousel of Progress 官方状态 ↗</a>。</p><h2>快通、停车与出发前核对</h2>
+<p><strong>你已订门票，这里只核对是否支持原计划，不改变或代购票。</strong> 10/3 的 Disney 两园需可当日跨园的权限，9/30 若晚去 MK 同理；10/5 的火车需适用两园 Park-to-Park。Epic 的入园与 Express 适用范围单独查看，不能拿老两园 Express 默认通用。</p>
+<p>若还想加购快通，优先考虑压缩最明显的 <strong>10/3 Hollywood Studios + MK、10/5 环球两园</strong>，再看 10/2 Epic。Disney 的 Multi Pass 不等于 Single Pass，也不保证所有项目随时可选；Universal Express 不等于门票，使用次数和参与项目以你买的产品为准。Hagrid 不要照旧攻略一概当作不支持 Express，查看当前票面清单。</p>
+<p>住园外、持日期型 Disney 门票，通常可在票起始日前 3 天购买适用 Lightning Lane；若首日是 9/30，9/27 已到这个窗口。不同票型窗口不同，购买前直接看 App，预约尽量在上午先兑现一项，再按有位情况补选。<a href="https://disneyworld.disney.go.com/lightning-lane-passes/" target="_blank" rel="noopener noreferrer">Disney 官方 Lightning Lane 规则 ↗</a></p>
+<p>Disney 当前标准停车为 <strong>35 美元/车/天</strong>，同一天四园通用，保留凭证；10/3 换停车场不应默认再交一遍标准日费。Magic Kingdom 停车在 TTC，需要继续乘单轨/船，不能按“车停好就到城堡”计算。Disney Springs 普通自助停车免费。<a href="https://disneyworld.disney.go.com/guest-services/parking/" target="_blank" rel="noopener noreferrer">Disney 官方停车规则 ↗</a></p>
+<p>租车核对收费公路设备/计费方式、燃油政策、还车门店和接驳时间。每天记住停车区域、层数和车位；水上项目带轻便雨衣、备用袜子；强刺激设施按现场要求存包，手机不因放在裤袋里就一定允许带上车。</p>
+<p>出发前仅剩这些关键信息要在你的订单/App 中落实：房源楼栋地址与门禁、首日行李方案、门票跨园权限、是否已有快通、两园营业时间、烟花/演出时刻、租车还车点。计划已按“普通入园 + 排队优先级”可执行，不依赖你必须加购任何产品。</p>
+<p>餐饮只提供顺路区域与候选，没有虚构大众点评/小红书的评分或探店结论。园区项目与营业信息以官方为主，天气、临停、角色出场和演出可在出发后变化。</p></div></section><footer class="foot"><span>ORLANDO FIELD NOTES · 2026</span><span>资料核对 2026.09.27 · 当日运营以官方 App 为准</span></footer></main>
+<script>
+document.documentElement.classList.add('js');
+const tabs=[...document.querySelectorAll('[data-tab]')];
+function showTab(id,scroll=false){if(!document.getElementById(id))return;document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===id));tabs.forEach(x=>{x.classList.toggle('active',x.dataset.tab===id);x.setAttribute('aria-pressed',x.dataset.tab===id)});if(scroll)document.querySelector('.nav-shell').scrollIntoView({behavior:'smooth'});}
+tabs.forEach(x=>x.addEventListener('click',()=>{showTab(x.dataset.tab,true);history.replaceState(null,'','#'+x.dataset.tab)}));
+function routeHash(){const hash=location.hash.slice(1);if(hash.startsWith('day-'))showTab('days');else if(hash.startsWith('park-'))showTab('parks');else if(['overview','days','parks','practical'].includes(hash))showTab(hash);}
+window.addEventListener('hashchange',routeHash);routeHash();
+document.querySelectorAll('a[href^="#day-"]').forEach(a=>a.addEventListener('click',()=>showTab('days')));
+let saved={};const storageKey='orlando-2026-checklist-v1';let canSave=true;try{saved=JSON.parse(localStorage.getItem(storageKey)||'{}');if(!saved||typeof saved!=='object')saved={}}catch(e){saved={};canSave=false}
+const rows=[...document.querySelectorAll('.park tbody tr')];
+rows.forEach((row,i)=>{row.dataset.search=row.textContent.toLowerCase();row.dataset.must=row.classList.contains('must-row')&&!row.textContent.includes('本次不排')?'true':'false';const key='item-'+i;const label=document.createElement('label');label.className='done-toggle';const input=document.createElement('input');input.type='checkbox';input.checked=!!saved[key];input.setAttribute('aria-label','标记已玩：'+row.cells[row.cells.length-2].textContent);const span=document.createElement('span');span.textContent='已玩';label.append(input,span);row.cells[0].prepend(label);row.classList.toggle('finished',input.checked);input.addEventListener('change',()=>{saved[key]=input.checked;row.classList.toggle('finished',input.checked);try{localStorage.setItem(storageKey,JSON.stringify(saved))}catch(e){canSave=false}progress()})});
+function progress(){const n=rows.filter(r=>r.querySelector('input').checked).length;document.getElementById('progress').textContent='已标记 '+n+' 项'+(canSave?'':' · 本次会话有效（浏览器不支持本地保存）')}
+const query=document.getElementById('query'),select=document.getElementById('park-select'),must=document.getElementById('must');let onlyMust=false;
+function filter(){let visible=0;const q=query.value.trim().toLowerCase();document.querySelectorAll('.park').forEach(park=>{let parkMatch=select.value==='all'||select.value===park.dataset.park;let matches=0;park.querySelectorAll('tbody tr').forEach(row=>{const yes=parkMatch&&(!onlyMust||row.dataset.must==='true')&&(!q||row.dataset.search.includes(q));row.hidden=!yes;if(yes){matches++;visible++}});park.querySelectorAll('p,li').forEach(el=>{const isSource=el.textContent.startsWith('来源：');const yes=(!q&&!onlyMust)||(!onlyMust&&el.textContent.toLowerCase().includes(q))||(onlyMust&&el.textContent.includes('★★★')&&(!q||el.textContent.toLowerCase().includes(q)));el.hidden=!yes;if(yes&&!isSource)matches++});park.querySelectorAll('.table-wrap').forEach(t=>t.hidden=![...t.querySelectorAll('tbody tr')].some(r=>!r.hidden));park.hidden=!parkMatch||matches===0});const count=[...document.querySelectorAll('.park')].filter(p=>!p.hidden).length;document.getElementById('result-count').textContent=count+' 个园区 · '+visible+' 条表格项目（另附演出与互动）';document.getElementById('empty').hidden=count!==0;}
+query.addEventListener('input',filter);select.addEventListener('change',filter);must.addEventListener('click',()=>{onlyMust=!onlyMust;must.classList.toggle('on',onlyMust);must.setAttribute('aria-pressed',onlyMust);filter()});document.getElementById('clear').addEventListener('click',()=>{query.value='';select.value='all';onlyMust=false;must.classList.remove('on');must.setAttribute('aria-pressed','false');filter()});progress();filter();
+</script></body></html>
